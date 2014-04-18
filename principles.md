@@ -42,9 +42,8 @@ Once a good base is created, we'll follow an organic hierarchy that works opposi
 Thinking organically means we should be writing stylesheets that lead to minimal overwriting of rules. Because we're working form the bottom up, and our components should be lean and independent, we should almost always be layering on styles instead of overwriting. If you find yourself redefining rules on a component, you should re-evaluate if your components are properly constructed and make sure your're working organically.
 
 ####Ease of Consumption
-- Slight learning curve, that promotes faster and easier future development
-- Defining naming and file organization conventions (opinionated as necessary)
-- Heavy in-code documentation
-- Detailed style guide
+Many important web frameworks have proved to be incredibly succesfull by creating a set of conventions that helped guide the developer down the right path. While it is good to think freely, a set of guidelines ensures that the goals of the goals of the framework are always in focus.
 
+With that in mind, this framework is opinionated as necessary. There are conventions surrounding file organization and class naming. Heavy in-code documentation based on JSDoc syntax is expected throughout, and a detailed style guide should be followed as closely as possible.
 
+While a slight learning curve is expected, the conventions baked into this framework promote faster and easier future development that is as closely aligned with the goals initially set as possible.
