@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testing</title>
+</head>
+<body>
+
+
+<div class="component component--small"> <!-- everything is camelCased and a double dash signifies a component modifier -->
+  <h1 class="component-title component-title--small">Title</h1>
+  <figure class="component-figure"> <!-- component elements are scoped to the componenent -->
+    <img src="#" alt="Image">
+  </figure>
+  <div class="component w-nav"> <!-- when nesting a component inside of another, you may need to wrap it with a w- class -->
+    <ul class="nav nav--stacked">
+      <li class="nav-item"></li>
+      <li class="nav-item"></li>
+      <li class="nav-item"></li>
+    </ul>
+  </div>
+</div>
+
+<nav class="nav">
+  <ul>
+    <li class="nav-item"></li>
+    <li class="nav-item"></li>
+    <li class="nav-item"></li>
+  </ul>
+</nav>
+
+<form action="#" class="form form--slim form--horizontal"> <!-- multiple modifiers can be used -->
+  <h1 class="form-title">Title goes here</h1>
+  <input type="text">
+  <button type="submit" class="form-button form-button--positive">Submit</button>
+  <button type="button" class="form-button form-button--negative">Cancel</button>
+  <p class="form-message is-errored u-hidden"></p> <!-- state classes are prefixed with is- and utility with u- -->
+</form>
+
+</body>
+</html>

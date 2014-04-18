@@ -1,0 +1,55 @@
+/**
+ * Component nav
+ *
+ * A navigation component that is best applied to `ul`, `ol` and `nav` elements.
+ * This component can be used for menus, headers, footers, sidebars, breadcrumbs and tabs.
+ * By default it is horizontally laid item with `.nav-item` children displayed `inline-block`.
+ *
+ * <ul class="nav [nav--*]">
+ *   <li class="nav-item">
+ *     <a href="#">Home</a>
+ *  </li>
+ *   <li class="nav-item">
+ *     <a href="#">About</a>
+ *   </li>
+ *   <li class="nav-item">
+ *     <a href="#">Contact</a>
+ *   </li>
+ * </ul>
+ *
+ * 1. Removing any `ul` or `ol` inherited styles.
+ * 2. Older browers don't support display `inline-block`, so the *display applies
+ *    display `inline` only to IE and forces it to behave like `inline-block` by
+ *    applying a zoom to the element.
+ */
+
+.nav {
+  margin: 0; // 1
+  padding: 0; // 1
+  list-style-type: none; // 1
+  @extend .u-clearfix;
+}
+
+.nav-item,
+.nav-item > a {
+  display: inline-block;
+  *display: inline; // 2
+  zoom: 1; // 2
+}
+
+/**
+ * Modifier nav--stacked
+ *
+ * A vertically stacked nav component with child elemnts that stretch its full width.
+ *
+ * 1. Set the display to `list-item`, so that it resembles a natural list as much as possible.
+ */
+
+.nav--stacked {
+  .nav-item {
+    display: list-item; // 1
+    > a {
+      display: block;
+    }
+  }
+}
