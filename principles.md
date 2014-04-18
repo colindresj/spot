@@ -35,12 +35,11 @@ By writing small, independent components, we create modules that can be re-used 
 Make sure not to tie your components to an HTML element or it's structure with the DOM. It should be able to shift from one location to another, and react in a predictable manner. A well architected system has components that can be assembled in various combinations and in various settings without problem. For example, a `.nav` component shouldn't care if it has a `.breadcrumbs` component, and that `.breadcrumbs` component shouldn't know or care about its parent `.nav` component. Further, that `.nav` component should work just as well with an `aside` element as a `ul`.
 
 ####Upward Consistency
-- Pattern repetition and code reuse
-- Crete a broad base that sets up non-classed elements
-- Set an organic hierarchy that works opposite to inheritance-driven CSS
-    Elements -> Components -> Layouts -> Pages
-- Progressive style layering (no overwriting styles)
+Upward consistency describes a way to layer the styles in your CSS. It's main taks are to develop pattern repetition and encourage code reuse. In order to establish upward consistency, we create a broad base that sets up non-classed elements. We should avoid setting styles to HTML tags as much as possible, and instead rely on the base to properly set up a foundation for component building. For this framework, we're relying on [Normalize](http://necolas.github.io/normalize.css/) to serve as our base.
 
+Once a good base is created, we'll follow an organic hierarchy that works opposite to inheritance-driven CSS. Traditional inheritence CSS forces us to write selectors such as `.home .sidebar ul`. This creates a problem when we want to take the component represented by the `ul` and place it somewhere else in our application, or when we want to refactor that component without impacting the rest of the page. So, instead of thinking in terms of descending selectors, we should instead be thinking in an organic manner: a group of elements create a component, a group of components create a layout, and a group of layouts creates a page. This could be represented in this manner `Page < Layout < Component < Element`. This means that we no longer have to consider the location or ancestry of a component when working with it, and so are free to make it flexible and independent.
+
+Thinking organically means we should be writing stylesheets that lead to minimal overwriting of rules. Because we're working form the bottom up, and our components should be lean and independent, we should almost always be layering on styles instead of overwriting. If you find yourself redefining rules on a component, you should re-evaluate if your components are properly constructed and make sure your're working organically.
 
 ####Ease of Consumption
 - Slight learning curve, that promotes faster and easier future development
