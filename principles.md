@@ -213,3 +213,37 @@ Multiple utility classes can be applied at once to construct structure.
   <!-- markup -->
 </div>
 ```
+
+##Example
+An example of the class name conventions:
+```html
+<div class="pageHeading pageHeading--secondary"> <!-- everything is camelCased and a double dash signifies a component modifier -->
+  <h1 class="pageHeading-title pageHeading-title--small">Title Text</h1>
+  <figure class="pageHeading-graphic"> <!-- component elements are scoped to the componenent -->
+    <img src="#" alt="Image">
+  </figure>
+  <div class="pageHeading w-nav"> <!-- when nesting a component inside of another, you may need to wrap it with a w- class -->
+    <ul class="nav nav--stacked">
+      <li class="nav-item"></li>
+      <li class="nav-item"></li>
+      <li class="nav-item"></li>
+    </ul>
+  </div>
+</div>
+
+<nav class="nav"> <!-- component classes can be applied to different HTML elements -->
+  <ul>
+    <li class="nav-item"></li>
+    <li class="nav-item"></li>
+    <li class="nav-item"></li>
+  </ul>
+</nav>
+
+<form action="#" class="form form--slim form--horizontal"> <!-- multiple modifiers can be used -->
+  <h1 class="form-title">Title goes here</h1>
+  <input type="text">
+  <button type="submit" class="form-button form-button--positive">Submit</button>
+  <button type="button" class="form-button form-button--negative">Cancel</button>
+  <p class="form-message is-errored u-hidden"></p> <!-- state classes are prefixed with is- and utility with u- -->
+</form>
+```

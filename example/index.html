@@ -6,12 +6,12 @@
 </head>
 <body>
 
-<div class="component component--small"> <!-- everything is camelCased and a double dash signifies a component modifier -->
-  <h1 class="component-title component-title--small"></h1>
-  <figure class="component-figure"> <!-- component elements are scoped to the componenent -->
+<div class="pageHeading pageHeading--secondary"> <!-- everything is camelCased and a double dash signifies a component modifier -->
+  <h1 class="pageHeading-title pageHeading-title--small">Title Text</h1>
+  <figure class="pageHeading-graphic"> <!-- component elements are scoped to the componenent -->
     <img src="#" alt="Image">
   </figure>
-  <div class="component w-nav"> <!-- when nesting a component inside of another, you may need to wrap it with a w- class -->
+  <div class="pageHeading w-nav"> <!-- when nesting a component inside of another, you may need to wrap it with a w- class -->
     <ul class="nav nav--stacked">
       <li class="nav-item"></li>
       <li class="nav-item"></li>
@@ -20,7 +20,7 @@
   </div>
 </div>
 
-<nav class="nav">
+<nav class="nav"> <!-- component classes can be applied to different HTML elements -->
   <ul>
     <li class="nav-item"></li>
     <li class="nav-item"></li>
