@@ -63,7 +63,7 @@ All class names in HTML and CSS are global objects. There is no way to namespace
 
 - All component names are `camelCased`
 - A double dash `--` signifies a component modifier
-- A state modifier is prefixed with `is-`
+- A state modifier is prefixed with `is` and is an adjoining class
 - Utility classes are prefixed with `u-`
 - Component elements are scoped to the component with a single dash `component-figure`
 - Nested components may optionally be wrapped in HTML element with a prefixed class `component w-nestedComponent`
@@ -110,4 +110,46 @@ Here's an example of what the component documentation might look like:
  * NOTES
  * - This component was modified from an earlier version. That version can be accessed in the `deprecations` directory.
  */
+```
+
+##Components
+```scss
+.componentName {
+  // styles
+}
+```
+
+###Component Element
+A component element is a class that is scoped to a component. It's responsible for applying styles directly to HTML elements that sit within a component. The syntax follows camel casing and all elements should be prefixed with the component name and a hyphen.
+```scss
+.componentName-elementName {
+  // styles
+}
+```
+
+###Component Modifier
+A component modifier is a class that alters the styles of the main component. The syntax follows camel casing and all modifiers should be prefixed with the component name and a double hyphen. **The modifier class should be included in the HTML in addition to the base component class.**
+
+Modifier classes must have additional documentation describing how they modify the main component.
+
+```scss
+/**
+ * Modifier componentName--modifier
+ *
+ * A description of the modifier.
+ *
+ * 1. An inline documentation reference points.
+ */
+
+.componentName--modification {
+  // styles
+}
+```
+
+###Component State Modifier
+A component state modifier is a special type of modifier class that adds styles to a component that is an a particular state, such as an error state. These classes typically get added using Javascript. State modifiers can be applied to all components, but each component should style its own state modifiers. **State modifiers should only be applied as adjoining classes.**
+```scss
+.componentName.isAtState {
+  // styles
+}
 ```
