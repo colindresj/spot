@@ -80,7 +80,7 @@ A `NOTES` block may optionally follow the main documentation block. Notes may in
 There is no need to note the author of a component or it's version.
 
 Here's an example of what the component documentation might look like:
-```
+```scss
 /**
  * Component nav
  *
@@ -118,6 +118,11 @@ Here's an example of what the component documentation might look like:
   // styles
 }
 ```
+```html
+<div class="componentName">
+  <!-- markup -->
+</div>
+```
 
 ###Component Element
 A component element is a class that is scoped to a component. It's responsible for applying styles directly to HTML elements that sit within a component. The syntax follows camel casing and all elements should be prefixed with the component name and a hyphen.
@@ -125,6 +130,13 @@ A component element is a class that is scoped to a component. It's responsible f
 .componentName-elementName {
   // styles
 }
+```
+```html
+<div class="componentName">
+  <div class="componentName-elementName">
+    <!-- markup -->
+  </div>
+</div>
 ```
 
 ###Component Modifier
@@ -134,7 +146,7 @@ Modifier classes must have additional documentation describing how they modify t
 
 ```scss
 /**
- * Modifier componentName--modifier
+ * Modifier componentName--modification
  *
  * A description of the modifier.
  *
@@ -145,11 +157,23 @@ Modifier classes must have additional documentation describing how they modify t
   // styles
 }
 ```
+```html
+<div class="componentName componentName--modification">
+  <!-- markup -->
+</div>
+```
 
 ###Component State Modifier
 A component state modifier is a special type of modifier class that adds styles to a component that is an a particular state, such as an error state. These classes typically get added using Javascript. State modifiers can be applied to all components, but each component should style its own state modifiers. **State modifiers should only be applied as adjoining classes.**
 ```scss
-.componentName.isAtState {
-  // styles
+.componentName {
+  &.isAtState {
+    // styles
+  }
 }
+```
+```html
+<div class="componentName isAtState">
+  <!-- markup -->
+</div>
 ```
