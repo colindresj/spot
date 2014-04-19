@@ -163,8 +163,15 @@ Modifier classes must have additional documentation describing how they modify t
 </div>
 ```
 
+Multiple modifier classes can be applied at once to construct structure.
+```html
+<div class="componentName componentName--modification componentName--modificationTwo">
+  <!-- markup -->
+</div>
+```
+
 ###Component State Modifier
-A component state modifier is a special type of modifier class that adds styles to a component that is an a particular state, such as an error state. These classes typically get added using Javascript. State modifiers can be applied to all components, but each component should style its own state modifiers. **State modifiers should only be applied as adjoining classes.**
+A component state modifier is a special type of modifier class that adds styles to a component that is an a particular state, such as an error state. These classes typically get added using Javascript. State modifiers can be applied to all components, but each component should style its own state modifiers. **State modifiers should only be styled as adjoining classes.**
 ```scss
 .componentName {
   &.isAtState {
@@ -174,6 +181,25 @@ A component state modifier is a special type of modifier class that adds styles 
 ```
 ```html
 <div class="componentName isAtState">
+  <!-- markup -->
+</div>
+```
+
+##Utilities
+```scss
+.u-utilityName {
+  // styles
+}
+```
+```html
+<div class="u-utilityName">
+  <!-- markup -->
+</div>
+```
+
+Multiple utility classes can be applied at once to construct structure.
+```html
+<div class="u-utilityName u-utilityNameTwo">
   <!-- markup -->
 </div>
 ```
