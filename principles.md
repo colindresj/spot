@@ -47,3 +47,67 @@ Many important web frameworks have proved to be incredibly succesfull by creatin
 With that in mind, this framework is opinionated as necessary. There are conventions surrounding file organization and class naming. Heavy in-code documentation based on JSDoc syntax is expected throughout, and a detailed style guide should be followed as closely as possible.
 
 While a slight learning curve is expected, the conventions baked into this framework promote faster and easier future development that is as closely aligned with the goals initially set as possible.
+
+##Conventions
+###File Organization
+Files should be be broken apart into small, coherent partials that mimic the principles of modularity. This means small partials that consist of a component, its elements and component modifiers. Four distinct partial types should emerge: base partials, component partials, utility partials and theme partials. Utilities are low-level abstractions that can be applied to any HTML element. They typically provide positional styles or general composition. Themes are styles that directly relate to how an HTML element should look, and so sit on top of this framework. Themes are not included as part of this framework, but a consistent expectation for how they should be organized is important nevertheless.
+
+The base class should be stored in the `base/` directory; components in the `components/` directory; and utilities in the `/utilities` directory. Any theme-related styles should be stored in directories that match the view they are theming. For example, themes for the user profile of an application should be kept in the `user_profile/` directory.
+
+All partials should be prefixed with an underscore and brought into the main stylesheet with `@import` declarations.
+
+A standard file structure within the stylesheets directory might look like this:
+
+###Class Names
+All class names in HTML and CSS are global objects. There is no way to namespace a class, so this framework sets a defined naming convention to create digestable class relationships and maintain low specificity, which is necessary for an organic hierarchy. The rules are:
+
+- All component names are `camelCased`
+- A double dash `--` signifies a component modifier
+- A state modifier is prefixed with `is-`
+- Utility classes are prefixed with `u-`
+- Component elements are scoped to the component with a single dash `component-figure`
+- Nested components may optionally be wrapped in HTML element with a prefixed class `component w-nestedComponent`
+
+###Documentation
+Good documentation helps to keep everyone working on a project happy. It's important that all the developers know how a component works, any limitations it might have and how modifiers should be applied. Additional notes on a component, such as deprecation warnings, should be documented as well.
+
+This framework follows a documentation practice based on JSDoc. After the component title, a two to three sentence description of the component follows. This description usually mentions the HTML elements the component can be applied to, how it can be rationally used and the default styles. Regular component classes are followed by example HTML markup.
+
+Inline comment refrence points are the final point of the first documentation block. These numbers correspond to specific points in your CSS rules that deserve a note. Think of them as header notes.
+
+A `NOTES` block may optionally follow the main documentation block. Notes may include warnings or comments left for developers who may look at the component in the future.
+
+There is no need to note the author of a component or it's version.
+
+Here's an example of what the component documentation might look like:
+```
+/**
+ * Component nav
+ *
+ * A navigation component that is best applied to `ul`, `ol` and `nav` elements.
+ * This component can be used for menus, headers, footers, sidebars, breadcrumbs and tabs.
+ * By default it is horizontally laid item with `.nav-item` children displayed `inline-block`.
+ *
+ * <ul class="nav [nav--*]">
+ *   <li class="nav-item">
+ *     <a href="#">Home</a>
+ *  </li>
+ *   <li class="nav-item">
+ *     <a href="#">About</a>
+ *   </li>
+ *   <li class="nav-item">
+ *     <a href="#">Contact</a>
+ *   </li>
+ * </ul>
+ *
+ * 1. Removing any `ul` or `ol` inherited styles.
+ * 2. Older browers don't support display `inline-block`, so the *display applies
+ *    display `inline` only to IE and forces it to behave like `inline-block` by
+ *    applying a zoom to the element.
+ */
+
+/**
+ * NOTES
+ * - This component was modified from an earlier version. That version can be accessed in the `deprecations` directory.
+ */
+```
