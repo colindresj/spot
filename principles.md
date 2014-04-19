@@ -63,7 +63,7 @@ All class names in HTML and CSS are global objects. There is no way to namespace
 
 - All component names are `camelCased`
 - A double dash `--` signifies a component modifier
-- A state modifier is prefixed with `is` and is an adjoining class
+- A state modifier is prefixed with `is-` and is an adjoining class
 - Utility classes are prefixed with `u-`
 - Component elements are scoped to the component with a single dash `component-figure`
 - Nested components may optionally be wrapped in HTML element with a prefixed class `component w-nestedComponent`
@@ -174,13 +174,13 @@ Multiple modifier classes can be applied at once to construct structure.
 A component state modifier is a special type of modifier class that adds styles to a component that is an a particular state, such as an error state. These classes typically get added using Javascript. State modifiers can be applied to all components, but each component should style its own state modifiers. **State modifiers should only be styled as adjoining classes.**
 ```scss
 .componentName {
-  &.isAtState {
+  &.is-atState {
     // styles
   }
 }
 ```
 ```html
-<div class="componentName isAtState">
+<div class="componentName is-atState">
   <!-- markup -->
 </div>
 ```
