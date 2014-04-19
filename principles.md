@@ -185,6 +185,16 @@ A component state modifier is a special type of modifier class that adds styles 
 </div>
 ```
 
+###Nesting Components
+If you're nesting components it may be beneficial to wrap it an HTML element. If so, the wrapper element should have and two classes applied to it: the outer components name and the inner components name prefixed by a `w-`.
+```html
+<div class="component w-anotherComponent">
+  <div class="anotherComponent">
+    <!-- markup -->
+  </div>
+</div>
+```
+
 ##Utilities
 ```scss
 .u-utilityName {
