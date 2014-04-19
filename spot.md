@@ -9,6 +9,9 @@ On smaller/short-lived projects, it's often okay to not worry about scalablity a
 
 The benefits laid out herein will be negligble, and may in fact cause discomfort on a small scale. However, as the application grows in complexity and dyanmism, the benefits will increase exponentially.
 
+###The Future
+This framework hopes to advance the development of CSS architecture along the same lines as the rest of the web. Projects like [Ember](http://emberjs.com/guides/components/), Angular and Polymer are helping to teach developers the power of modularized HTML, and this framework hopes to do the same with CSS.
+
 ##Approach
 This framework sets out to achieve clearly outlined goals. A few guiding principles and the appropriate methods for following those principles have been created in order to reach the goals laid out.
 
