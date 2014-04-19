@@ -125,7 +125,7 @@ Here's an example of what the component documentation might look like:
 ```
 
 ###Component Element
-A component element is a class that is scoped to a component. It's responsible for applying styles directly to HTML elements that sit within a component. The syntax follows camel casing and all elements should be prefixed with the component name and a hyphen.
+A component element is a class that is scoped to a component. It's responsible for applying styles directly to HTML elements that sit within a component. The syntax follows camel casing and all elements should be prefixed with the component name and a dash.
 ```scss
 .componentName-elementName {
   // styles
@@ -140,7 +140,7 @@ A component element is a class that is scoped to a component. It's responsible f
 ```
 
 ###Component Modifier
-A component modifier is a class that alters the styles of the main component. The syntax follows camel casing and all modifiers should be prefixed with the component name and a double hyphen. **The modifier class should be included in the HTML in addition to the base component class.**
+A component modifier is a class that alters the styles of the main component. The syntax follows camel casing and all modifiers should be prefixed with the component name and a double dash. **The modifier class should be included in the HTML in addition to the base component class.**
 
 Modifier classes must have additional documentation describing how they modify the main component.
 
