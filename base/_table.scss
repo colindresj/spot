@@ -1,0 +1,128 @@
+/**
+ * Base Table
+ *
+ * A table for displaying information in an organized manner. This component is
+ * best applied to table elements. By default it has a 1px border in
+ * `$dark-gray`, collapsed borders and no border spacing.
+ *
+ * <table class="table table--bordered table--hoverRow">
+ *   <colgroup>
+ *     <col class="table-col--oneEigth">
+ *     <col>
+ *   </colgroup>
+ *   <thead>
+ *     <tr>
+ *       <th></th>
+ *       <th>Header 2</th>
+ *       <th>Header 3</th>
+ *     </tr>
+ *   </thead>
+ *   <tbody>
+ *     <tr>
+ *       <td>Datum 1</td>
+ *       <td>Datum 2</td>
+ *       <td>Datum 3</td>
+ *     </tr>
+ *       <tr>
+ *       <td>Datum 1</td>
+ *       <td>Datum 2</td>
+ *       <td>Datum 3</td>
+ *     </tr>
+ *   </tbody>
+ * </table>
+ *
+ * 1. Remove most spacing between table cells.
+ * 2. Properly align cells that span mutiple rows or columns.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; // 1
+}
+
+th,
+td {
+  padding: 0; // 1
+}
+
+[colspan]{
+    text-align: center; // 2
+}
+[colspan="1"]{
+    text-align: left; // 2
+}
+[rowspan]{
+    vertical-align: middle; // 2
+}
+[rowspan="1"]{
+    vertical-align: top; // 2
+}
+
+.table {
+  border: 1px solid $dark-gray;
+}
+
+$table-widths: (
+  oneEigth: 12.5%, oneFourth: 25%, oneThird: 33.33%, threeEigths: 37.5%,
+  oneHalf: 50%, fiveEigths: 62.5%, twoThirds: 66.666%, threeQuarters: 75%,
+  sevenEigths: 87.5%, full: 100%
+);
+
+/**
+ * Modifier table-col--*
+ *
+ * A `.table` modifier that sets the table width. Relies on the `$table-widths`
+ * map.
+ */
+
+@each $class, $width in $table-widths {
+  .table--#{$class} {
+    width: $width;
+  }
+}
+
+/**
+ * Modifier table-col--*
+ *
+ * A `col` element modifier that sets proportional column widths. Relies on the
+ * `$table-widths` map.
+ */
+
+@each $class, $width in $table-widths {
+  .table-col--#{$class} {
+    width: $width;
+  }
+}
+
+.table--striped {
+  tbody tr:nth-of-type(odd){
+    background-color: $light-gray;
+  }
+}
+
+.table--bordered {
+  th,
+  td {
+    border: 1px solid $dark-gray;
+  }
+
+}
+
+.table--borderedHorizontal {
+  tr {
+    border-bottom: 1px solid $dark-gray;
+  }
+}
+
+.table--borderedVertical {
+  th,
+  td {
+    border-right: 1px solid $dark-gray;
+  }
+}
+
+.table--hoverRow {
+  tbody tr:hover {
+    background: $light-gray;
+  }
+}
