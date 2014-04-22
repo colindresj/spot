@@ -1,5 +1,5 @@
 #Spot CSS Framework
-> A modern day CSS framework that follows a flexible approach for creating scalable stylesheets.
+> A modern day CSS framework that follows a flexible approach to creating scalable stylesheets.
 
 ##Introduction
 Cascading stylsheets were built to be used on sites that are very different from the web applications that we're currently building. This dictates the need to abandon the traditional way of styling webpages, and implement a framework that mirrors the way applications are programatically architected. That is, we should borrow from other web domains, and apply those best practices to web design: modularity, a separation of concerns, DRY, encapsulation, convention, etc.
@@ -10,7 +10,10 @@ On smaller/short-lived projects, it's often okay to not worry about scalablity a
 The benefits laid out herein will be negligble, and may in fact cause discomfort on a small scale. However, as the application grows in complexity and dyanmism, the benefits will increase exponentially.
 
 ###The Future
-This framework hopes to advance the development of CSS architecture along the same lines as the rest of the web. Projects like [Ember](http://emberjs.com/guides/components/), Angular and Polymer are helping to teach developers the power of modularized HTML, and this framework hopes to do the same with CSS.
+This framework hopes to advance the development of CSS architecture along the same lines as the rest of the web. Projects like [Ember](http://emberjs.com/guides/components/), [Angular](https://angularjs.org/) and [Polymer](http://www.polymer-project.org/) are helping to teach developers the power of modularized HTML, and this framework hopes to do the same with CSS.
+
+###Inspiration
+Inspiration for this framework comes from methodologies such as [OOCSS](http://oocss.org/), [SMACSS](http://smacss.com/), [BEM](http://bem.info/) and [Atomic Design](http://bradfrostweb.com/blog/post/atomic-web-design/). Writing this framework has meant humbly standing on the shoulders of giants like [Nicole Sullivan](http://www.stubbornella.org/content/), [Nicolas Gallagher](http://nicolasgallagher.com/), [Jonathan Snook](http://snook.ca/) and [Harry Roberts](http://csswizardry.com/). This framework exists because of their efforts and leadership.
 
 ##Approach
 This framework sets out to achieve clearly outlined goals. A few guiding principles and the appropriate methods for following those principles have been created in order to reach the goals laid out.
