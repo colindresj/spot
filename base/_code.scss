@@ -1,22 +1,8 @@
 /**
  * Component Code
  *
- * Simple styling and formatting for code rendered as markup. The default is a
- * 1em font-size and monospace text.
+ * No default `.code` component; rely on the `code` element for default styling.
  */
-
-pre {
-  overflow: auto;
-}
-
-code,
-kbd,
-pre,
-samp,
-.code {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
 
 /**
  * Modifier code--highlighted
@@ -28,7 +14,6 @@ samp,
  * 1. Word wrapping is removed in order to prevent code from breaking onto
  * multiple lines.
  */
-
 
 .code--highlighted {
   background-color: $code-highlight;

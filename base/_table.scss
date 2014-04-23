@@ -1,5 +1,5 @@
 /**
- * Base Table
+ * Component Table
  *
  * A table for displaying information in an organized manner. This component is
  * best applied to table elements. By default it has a 1px border in
@@ -31,19 +31,8 @@
  *   </tbody>
  * </table>
  *
- * 1. Remove most spacing between table cells.
- * 2. Properly align cells that span mutiple rows or columns.
+ * 1. Properly align cells that span mutiple rows or columns.
  */
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; // 1
-}
-
-th,
-td {
-  padding: 0; // 1
-}
 
 [colspan]{
     text-align: center; // 2
