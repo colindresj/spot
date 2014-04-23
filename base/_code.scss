@@ -1,0 +1,40 @@
+/**
+ * Component Code
+ *
+ * Simple styling and formatting for code rendered as markup. The default is a
+ * 1em font-size and monospace text.
+ */
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp,
+.code {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/**
+ * Modifier code--highlighted
+ *
+ * A `.code` modifier that provides simple highlighting styles. A background
+ * color, small border-radius and padding is applied. The text is shrunken down
+ * as a result of the additional padding.
+ *
+ * 1. Word wrapping is removed in order to prevent code from breaking onto
+ * multiple lines.
+ */
+
+
+.code--highlighted {
+  background-color: $code-highlight;
+  border-radius: 5px;
+  color: $code-text;
+  font-size: .85em;
+  padding: 2px 3px;
+  white-space: nowrap; // 1
+}

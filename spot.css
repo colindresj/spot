@@ -1,0 +1,169 @@
+/**
+ * Base Table
+ *
+ * A table for displaying information in an organized manner. This component is
+ * best applied to table elements. By default it has a 1px border in
+ * `$dark-gray`, collapsed borders and no border spacing.
+ *
+ * <table class="table table--bordered table--hoverRow">
+ *   <colgroup>
+ *     <col class="table-col--oneEigth">
+ *     <col>
+ *   </colgroup>
+ *   <thead>
+ *     <tr>
+ *       <th></th>
+ *       <th>Header 2</th>
+ *       <th>Header 3</th>
+ *     </tr>
+ *   </thead>
+ *   <tbody>
+ *     <tr>
+ *       <td>Datum 1</td>
+ *       <td>Datum 2</td>
+ *       <td>Datum 3</td>
+ *     </tr>
+ *       <tr>
+ *       <td>Datum 1</td>
+ *       <td>Datum 2</td>
+ *       <td>Datum 3</td>
+ *     </tr>
+ *   </tbody>
+ * </table>
+ *
+ * 1. Remove most spacing between table cells.
+ * 2. Properly align cells that span mutiple rows or columns.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th,
+td {
+  padding: 0; }
+
+[colspan] {
+  text-align: center; }
+
+[colspan="1"] {
+  text-align: left; }
+
+[rowspan] {
+  vertical-align: middle; }
+
+[rowspan="1"] {
+  vertical-align: top; }
+
+.table {
+  border: 1px solid #444444; }
+
+/**
+ * Modifier table-col--*
+ *
+ * A `.table` modifier that sets the table width. Relies on the `$table-widths`
+ * map.
+ */
+.table--oneEigth {
+  width: 12.5%; }
+
+.table--oneFourth {
+  width: 25%; }
+
+.table--oneThird {
+  width: 33.33%; }
+
+.table--threeEigths {
+  width: 37.5%; }
+
+.table--oneHalf {
+  width: 50%; }
+
+.table--fiveEigths {
+  width: 62.5%; }
+
+.table--twoThirds {
+  width: 66.666%; }
+
+.table--threeQuarters {
+  width: 75%; }
+
+.table--sevenEigths {
+  width: 87.5%; }
+
+.table--full {
+  width: 100%; }
+
+/**
+ * Modifier table-col--*
+ *
+ * A `col` element modifier that sets proportional column widths. Relies on the
+ * `$table-widths` map.
+ */
+.table-col--oneEigth {
+  width: 12.5%; }
+
+.table-col--oneFourth {
+  width: 25%; }
+
+.table-col--oneThird {
+  width: 33.33%; }
+
+.table-col--threeEigths {
+  width: 37.5%; }
+
+.table-col--oneHalf {
+  width: 50%; }
+
+.table-col--fiveEigths {
+  width: 62.5%; }
+
+.table-col--twoThirds {
+  width: 66.666%; }
+
+.table-col--threeQuarters {
+  width: 75%; }
+
+.table-col--sevenEigths {
+  width: 87.5%; }
+
+.table-col--full {
+  width: 100%; }
+
+.table--striped tbody tr:nth-of-type(odd) {
+  background-color: #cccccc; }
+
+.table--bordered th,
+.table--bordered td {
+  border: 1px solid #444444; }
+
+.table--borderedHorizontal tr {
+  border-bottom: 1px solid #444444; }
+
+.table--borderedVertical th,
+.table--borderedVertical td {
+  border-right: 1px solid #444444; }
+
+.table--hoverRow tbody tr:hover {
+  background: #cccccc; }
+
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp,
+.code {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+.code--highlighted {
+  background-color: whitesmoke;
+  color: #434343;
+  border-radius: 5px;
+  padding: 2px 3px;
+  font-size: .85em;
+  white-space: nowrap; }
