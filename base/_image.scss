@@ -1,0 +1,43 @@
+/**
+ * Component Image
+ *
+ * No default `.img` component; rely on the `img` element for default styling.
+ *
+ * <img class="img--center" src="/path/to/image" alt="Alt Text">
+ */
+
+figure > img {
+  display: block;
+}
+
+.img--fluid {
+  max-width: 100%;
+}
+
+.img--responsive {
+  @extend .img--fluid;
+  height: auto;
+}
+
+.img--right {
+  float: right;
+  margin: 0 0 $base-spacing-unit $base-spacing-unit;
+}
+
+.img--left {
+  float: left;
+  margin: 0 $base-spacing-unit $base-spacing-unit 0;
+}
+
+.img--center {
+  display: block;
+  margin: 0 auto $base-spacing-unit;
+}
+
+.img--rounded {
+  border-radius: $base-rounded-corner;
+}
+
+.img--circle {
+  border-radius: 50%;
+}

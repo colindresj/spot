@@ -58,7 +58,7 @@ td {
   border: 1px solid #444444; }
 
 /**
- * Modifier table-col--*
+ * Modifier .table--*
  *
  * A `.table` modifier that sets the table width. Relies on the `$table-widths`
  * map.
@@ -94,7 +94,7 @@ td {
   width: 100%; }
 
 /**
- * Modifier table-col--*
+ * Modifier .table-col--*
  *
  * A `col` element modifier that sets proportional column widths. Relies on the
  * `$table-widths` map.
@@ -146,12 +146,15 @@ td {
 .table--hoverRow tbody tr:hover {
   background: #cccccc; }
 
+/**
+ * Component Code
+ *
+ * Simple styling and formatting for code rendered as markup. The default is a
+ * 1em font-size and monospace text.
+ */
 pre {
   overflow: auto; }
 
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
 code,
 kbd,
 pre,
@@ -160,10 +163,59 @@ samp,
   font-family: monospace, monospace;
   font-size: 1em; }
 
+/**
+ * Modifier code--highlighted
+ *
+ * A `.code` modifier that provides simple highlighting styles. A background
+ * color, small border-radius and padding is applied. The text is shrunken down
+ * as a result of the additional padding.
+ *
+ * 1. Word wrapping is removed in order to prevent code from breaking onto
+ * multiple lines.
+ */
 .code--highlighted {
   background-color: whitesmoke;
-  color: #434343;
   border-radius: 5px;
-  padding: 2px 3px;
+  color: #434343;
   font-size: .85em;
+  padding: 2px 3px;
   white-space: nowrap; }
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ *
+ * 1. Remove border when inside `a` in IE 8/9/10
+ * 2. Correct overflow not hidden in IE 9/10/11
+ */
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure > img {
+  display: block; }
+
+.img--fluid, .img--responsive {
+  max-width: 100%; }
+
+.img--responsive {
+  height: auto; }
+
+.img--right {
+  float: right;
+  margin: 0 0 24px 24px; }
+
+.img--left {
+  float: left;
+  margin: 0 24px 24px 0; }
+
+.img--center {
+  display: block;
+  margin: 0 auto 24px; }
+
+.img--rounded {
+  border-radius: 5px; }
+
+.img--circle {
+  border-radius: 50%; }
