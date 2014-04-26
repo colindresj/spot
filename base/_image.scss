@@ -1,9 +1,11 @@
 /**
- * Component Image
- *
- * No default `.img` component; rely on the `img` element for default styling.
+ * Base Component `img`
  *
  * <img class="img--center" src="/path/to/image" alt="Alt Text">
+ *
+ * An `img` component that consists of a number of modifiers and no unmodified
+ * component class. To use an unmodified component, rely on the native `img`
+ * element.
  */
 
 figure > img {
