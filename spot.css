@@ -354,8 +354,14 @@ td,
 th {
   padding: 0; }
 
+html {
+  font: 1em sans-serif;
+  line-height: 1.5em;
+  min-height: 100%;
+  overflow-y: scroll; }
+
 /**
- * Component Table
+ * Base Component `table`
  *
  * A table for displaying information in an organized manner. This component is
  * best applied to table elements. By default it has a 1px border in
@@ -405,9 +411,9 @@ th {
   border: 1px solid #444444; }
 
 /**
- * Modifier .table--*
+ * Modifier `table--*`
  *
- * A `.table` modifier that sets the table width.
+ * A `table` modifier that sets the table width.
  *
  * 1. Width based modifiers (ex. table--oneThird) will determine the length of
  *    the table in percentages, and so are relative to the width of its parent.
@@ -461,7 +467,7 @@ th {
   background: #cccccc; }
 
 /**
- * Element .table-col--*
+ * Base Element `table-col`
  *
  * A `table-col` element that consists of a single modifier and no unmodified
  * element. The modifier attribute sets proportional column widths and relies on
@@ -498,19 +504,14 @@ th {
   width: 100%; }
 
 /**
- * Component Code
+ * Base Component `code`
  *
  * <code class="code--highlighted">var $ = {};</code>
- */
-/**
- * Modifier code--highlighted
  *
- * A `.code` modifier that provides simple highlighting styles. A background
- * color, small border-radius and padding is applied. The text is shrunken down
- * as a result of the additional padding.
- *
- * 1. Word wrapping is removed in order to prevent code from breaking onto
- * multiple lines.
+ * A `code` component that consists of a single modifier and no unmodified
+ * component class. The modifier provides simple highlighting styles. A
+ * background color, small border-radius and padding is applied. The text is
+ * shrunken down as a result of the additional padding.
  */
 .code--highlighted {
   background-color: whitesmoke;
@@ -521,9 +522,13 @@ th {
   white-space: nowrap; }
 
 /**
- * Base Image
+ * Base Component `img`
  *
  * <img class="img--center" src="/path/to/image" alt="Alt Text">
+ *
+ * An `img` component that consists of a number of modifiers and no unmodified
+ * component class. To use an unmodified component, rely on the native `img`
+ * element.
  */
 figure > img {
   display: block; }
@@ -553,8 +558,8 @@ figure > img {
   border-radius: 50%; }
 
 /**
- * Base Heading
- * <h1 class="headingOne">
+ * Base Component `heading[size]`
+ * <h1>
  *   The Title
  * </h1>
  *
@@ -601,7 +606,7 @@ h6,
   font-weight: bold; }
 
 /**
- * Base Subheading
+ * Base Component `subheading[size]`
  * <small class="subheadingOne">
  *   The Subtitle
  * </small>
@@ -641,6 +646,13 @@ h6,
   font-size: 0.625rem;
   font-weight: normal; }
 
+/**
+ * Modifier `subheading[size]--block`
+ *
+ * A `subheading[size]` modifier sets the display type for the subheading. The
+ * subheading may be used inside a naturally inline element, such as a `span`,
+ * so this modifier lends `block` display to those types of elements.
+ */
 .subheadingOne--block {
   display: block; }
 
@@ -658,3 +670,27 @@ h6,
 
 .subheadingSix--block {
   display: block; }
+
+/**
+ * Base Component `p`
+ *
+ * <p>
+ *   Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus
+ *   ac facilisis in, egestas eget quam.
+ * </p>
+ *
+ * A non-modifed component that relies on the `p` element.
+ */
+p {
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+  font-family: inherit;
+  font-weight: normal;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  text-rendering: optimizeLegibility; }
+
+.lede {
+  font-size: 21.344px;
+  font-size: 1.334rem; }

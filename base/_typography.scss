@@ -97,7 +97,6 @@ h6,
  * so this modifier lends `block` display to those types of elements.
  */
 
-
 .subheadingOne--block {
   @extend .subheadingOne;
   display: block;
@@ -121,4 +120,29 @@ h6,
 .subheadingSix--block {
   @extend .subheadingSix;
   display: block;
+}
+
+/**
+ * Base Component `p`
+ *
+ * <p>
+ *   Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus
+ *   ac facilisis in, egestas eget quam.
+ * </p>
+ *
+ * A non-modifed component that relies on the `p` element.
+ */
+
+p {
+  @include to-rem(margin-bottom, ($base-line-height / 2));
+  font-family: inherit;
+  font-weight: normal;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  text-rendering: optimizeLegibility;
+}
+
+.lede {
+  @include font-size($base-font-size * 1.334);
 }
