@@ -14,37 +14,39 @@
 h1,
 .headingOne {
   @include font-size($heading-one-size);
-  font-weight: bold;
 }
 
 h2,
 .headingTwo {
   @include font-size($heading-two-size);
-  font-weight: bold;
 }
 
 h3,
 .headingThree {
   @include font-size($heading-three-size);
-  font-weight: bold;
 }
 
 h4,
 .headingFour {
   @include font-size($heading-four-size);
-  font-weight: bold;
 }
 
 h5,
 .headingFive {
   @include font-size($heading-five-size);
-  font-weight: bold;
 }
 
 h6,
 .headingSix {
   @include font-size($heading-six-size);
+}
+
+h1, h2, h3, h4, h5, h6,
+.headingOne, .headingTwo,
+.headingThree, .headingFour,
+.headingFive, .headingSix {
   font-weight: bold;
+  line-height: 1.4;
 }
 
 /**
@@ -61,32 +63,33 @@ h6,
 
 .subheadingOne {
   @include font-size($heading-one-size * 5/8);
-  font-weight: normal;
 }
 
 .subheadingTwo {
   @include font-size($heading-two-size * 5/8);
-  font-weight: normal;
 }
 
 .subheadingThree {
   @include font-size($heading-three-size * 5/8);
-  font-weight: normal;
 }
 
 .subheadingFour {
   @include font-size($heading-four-size * 5/8);
-  font-weight: normal;
 }
 
 .subheadingFive {
   @include font-size($heading-five-size * 5/8);
-  font-weight: normal;
 }
 
 .subheadingSix {
   @include font-size($heading-six-size * 5/8);
+}
+
+.subheadingOne, .subheadingTwo,
+.subheadingThree, .subheadingFour,
+.subheadingFive, .subheadingSix {
   font-weight: normal;
+  line-height: 1.25;
 }
 
 /**
@@ -99,26 +102,26 @@ h6,
 
 .subheadingOne--block {
   @extend .subheadingOne;
-  display: block;
 }
 .subheadingTwo--block {
   @extend .subheadingTwo;
-  display: block;
 }
 .subheadingThree--block {
   @extend .subheadingThree;
-  display: block;
 }
 .subheadingFour--block {
   @extend .subheadingFour;
-  display: block;
 }
 .subheadingFive--block {
   @extend .subheadingFive;
-  display: block;
 }
 .subheadingSix--block {
   @extend .subheadingSix;
+}
+
+.subheadingOne--block, .subheadingTwo--block,
+.subheadingThree--block, .subheadingFour--block,
+.subheadingFive--block, .subheadingSix--block {
   display: block;
 }
 

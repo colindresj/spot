@@ -589,38 +589,39 @@ figure > img {
 h1,
 .headingOne {
   font-size: 36px;
-  font-size: 2.25rem;
-  font-weight: bold; }
+  font-size: 2.25rem; }
 
 h2,
 .headingTwo {
   font-size: 30px;
-  font-size: 1.875rem;
-  font-weight: bold; }
+  font-size: 1.875rem; }
 
 h3,
 .headingThree {
   font-size: 24px;
-  font-size: 1.5rem;
-  font-weight: bold; }
+  font-size: 1.5rem; }
 
 h4,
 .headingFour {
   font-size: 22px;
-  font-size: 1.375rem;
-  font-weight: bold; }
+  font-size: 1.375rem; }
 
 h5,
 .headingFive {
   font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: bold; }
+  font-size: 1.125rem; }
 
 h6,
 .headingSix {
   font-size: 16px;
-  font-size: 1rem;
-  font-weight: bold; }
+  font-size: 1rem; }
+
+h1, h2, h3, h4, h5, h6,
+.headingOne, .headingTwo,
+.headingThree, .headingFour,
+.headingFive, .headingSix {
+  font-weight: bold;
+  line-height: 1.4; }
 
 /**
  * Base Component `subheading[size]`
@@ -635,33 +636,35 @@ h6,
  */
 .subheadingOne, .subheadingOne--block {
   font-size: 22.5px;
-  font-size: 1.40625rem;
-  font-weight: normal; }
+  font-size: 1.40625rem; }
 
 .subheadingTwo, .subheadingTwo--block {
   font-size: 18.75px;
-  font-size: 1.17188rem;
-  font-weight: normal; }
+  font-size: 1.17188rem; }
 
 .subheadingThree, .subheadingThree--block {
   font-size: 15px;
-  font-size: 0.9375rem;
-  font-weight: normal; }
+  font-size: 0.9375rem; }
 
 .subheadingFour, .subheadingFour--block {
   font-size: 13.75px;
-  font-size: 0.85938rem;
-  font-weight: normal; }
+  font-size: 0.85938rem; }
 
 .subheadingFive, .subheadingFive--block {
   font-size: 11.25px;
-  font-size: 0.70313rem;
-  font-weight: normal; }
+  font-size: 0.70313rem; }
 
 .subheadingSix, .subheadingSix--block {
   font-size: 10px;
-  font-size: 0.625rem;
-  font-weight: normal; }
+  font-size: 0.625rem; }
+
+.subheadingOne, .subheadingOne--block, .subheadingTwo, .subheadingTwo--block,
+.subheadingThree,
+.subheadingThree--block, .subheadingFour, .subheadingFour--block,
+.subheadingFive,
+.subheadingFive--block, .subheadingSix, .subheadingSix--block {
+  font-weight: normal;
+  line-height: 1.25; }
 
 /**
  * Modifier `subheading[size]--block`
@@ -670,22 +673,9 @@ h6,
  * subheading may be used inside a naturally inline element, such as a `span`,
  * so this modifier lends `block` display to those types of elements.
  */
-.subheadingOne--block {
-  display: block; }
-
-.subheadingTwo--block {
-  display: block; }
-
-.subheadingThree--block {
-  display: block; }
-
-.subheadingFour--block {
-  display: block; }
-
-.subheadingFive--block {
-  display: block; }
-
-.subheadingSix--block {
+.subheadingOne--block, .subheadingTwo--block,
+.subheadingThree--block, .subheadingFour--block,
+.subheadingFive--block, .subheadingSix--block {
   display: block; }
 
 /**
