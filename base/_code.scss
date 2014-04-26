@@ -1,20 +1,12 @@
 /**
- * Component Code
- *
- * No default `.code` component; rely on the `code` element for default styling.i
+ * Base Component `code`
  *
  * <code class="code--highlighted">var $ = {};</code>
- */
-
-/**
- * Modifier code--highlighted
  *
- * A `.code` modifier that provides simple highlighting styles. A background
- * color, small border-radius and padding is applied. The text is shrunken down
- * as a result of the additional padding.
- *
- * 1. Word wrapping is removed in order to prevent code from breaking onto
- * multiple lines.
+ * A `code` component that consists of a single modifier and no unmodified
+ * component class. The modifier provides simple highlighting styles. A
+ * background color, small border-radius and padding is applied. The text is
+ * shrunken down as a result of the additional padding.
  */
 
 .code--highlighted {
