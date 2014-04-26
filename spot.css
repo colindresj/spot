@@ -354,6 +354,11 @@ td,
 th {
   padding: 0; }
 
+/**
+ * Base Component `html`
+ *
+ * The root component. Roots for `rem` value are set here.
+ */
 html {
   font: 1em sans-serif;
   line-height: 1.5em;
@@ -508,18 +513,30 @@ html {
  *
  * <code class="code--highlighted">var $ = {};</code>
  *
- * A `code` component that consists of a single modifier and no unmodified
- * component class. The modifier provides simple highlighting styles. A
- * background color, small border-radius and padding is applied. The text is
- * shrunken down as a result of the additional padding.
+ * A `code` component that consists of a two modifiers and no unmodified
+ * component class. The `--highlighted` modifier provides simple highlighting
+ * styles. A background color, small border-radius and padding is applied. The
+ * text is shrunken down as a result of the additional padding.
+ *
+ * The `--keyboard` modifier provides highlighting for input that is typically
+ * entered using the keyboard.
+ *
+ * 1. Prevent code from breaking onto two lines.
  */
-.code--highlighted {
-  background-color: whitesmoke;
+.code--highlighted,
+.code--keyboard {
   border-radius: 5px;
-  color: #434343;
   font-size: .85em;
   padding: 2px 3px;
   white-space: nowrap; }
+
+.code--highlighted {
+  background-color: whitesmoke;
+  color: #434343; }
+
+.code--keyboard {
+  background-color: #1a1a1a;
+  color: #e6e6e6; }
 
 /**
  * Base Component `img`

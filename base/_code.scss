@@ -3,17 +3,31 @@
  *
  * <code class="code--highlighted">var $ = {};</code>
  *
- * A `code` component that consists of a single modifier and no unmodified
- * component class. The modifier provides simple highlighting styles. A
- * background color, small border-radius and padding is applied. The text is
- * shrunken down as a result of the additional padding.
+ * A `code` component that consists of a two modifiers and no unmodified
+ * component class. The `--highlighted` modifier provides simple highlighting
+ * styles. A background color, small border-radius and padding is applied. The
+ * text is shrunken down as a result of the additional padding.
+ *
+ * The `--keyboard` modifier provides highlighting for input that is typically
+ * entered using the keyboard.
+ *
+ * 1. Prevent code from breaking onto two lines.
  */
 
-.code--highlighted {
-  background-color: $code-highlight;
+.code--highlighted,
+.code--keyboard {
   border-radius: $base-rounded-corner;
-  color: $code-text;
   font-size: .85em;
   padding: 2px 3px;
   white-space: nowrap; // 1
+}
+
+.code--highlighted {
+  background-color: $code-highlight;
+  color: $code-text;
+}
+
+.code--keyboard {
+  background-color: lighten(black, 10%);
+  color: darken(white, 10%);
 }
