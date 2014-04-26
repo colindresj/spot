@@ -1,5 +1,5 @@
 /**
- * Component Table
+ * Base Component `table`
  *
  * A table for displaying information in an organized manner. This component is
  * best applied to table elements. By default it has a 1px border in
@@ -58,27 +58,17 @@ $table-widths: (
 );
 
 /**
- * Modifier .table--*
+ * Modifier `table--*`
  *
- * A `.table` modifier that sets the table width. Relies on the `$table-widths`
- * map.
+ * A `table` modifier that sets the table width.
+ *
+ * 1. Width based modifiers (ex. table--oneThird) will determine the length of
+ *    the table in percentages, and so are relative to the width of its parent.
+ *    The `$table-widths` map specifies all the table width modifiers available.
  */
 
 @each $class, $width in $table-widths {
-  .table--#{$class} {
-    width: $width;
-  }
-}
-
-/**
- * Modifier .table-col--*
- *
- * A `col` element modifier that sets proportional column widths. Relies on the
- * `$table-widths` map.
- */
-
-@each $class, $width in $table-widths {
-  .table-col--#{$class} {
+  .table--#{$class} { // 1
     width: $width;
   }
 }
@@ -94,7 +84,6 @@ $table-widths: (
   td {
     border: 1px solid $dark-gray;
   }
-
 }
 
 .table--borderedHorizontal {
@@ -113,5 +102,19 @@ $table-widths: (
 .table--hoverRow {
   tbody tr:hover {
     background: $light-gray;
+  }
+}
+
+/**
+ * Base Element `table-col`
+ *
+ * A `table-col` element that consists of a single modifier and no unmodified
+ * element. The modifier attribute sets proportional column widths and relies on
+ * the `$table-widths` map from above.
+ */
+
+@each $class, $width in $table-widths {
+  .table-col--#{$class} {
+    width: $width;
   }
 }
