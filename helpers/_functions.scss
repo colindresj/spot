@@ -1,0 +1,6 @@
+@function toRem($pixels) {
+  @if unitless($pixels) {
+    $pixels: $pixels + "px";
+  }
+  @return ($pixels / 16px) * 1rem;
+}
