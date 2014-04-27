@@ -40,11 +40,11 @@ li {
  */
 
 $list-style-types: (
-  unstyled: none,
-  numbered: decimal,
-  dot: disc,
   circle: circle,
-  square: square
+  dot: disc,
+  numbered: decimal,
+  square: square,
+  unstyled: none
 );
 
 @each $class, $style in $list-style-types {
