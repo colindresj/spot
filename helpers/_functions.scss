@@ -4,3 +4,12 @@
   }
   @return ($pixels / 16px) * 1rem;
 }
+
+@function createInputsList($input-types) {
+  $inputs : ();
+  @each $type in $input-types {
+    $input: "input[type='#{$type}']";
+    $inputs: append($inputs, unquote($input), comma);
+  }
+  @return $inputs;
+}

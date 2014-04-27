@@ -1,0 +1,50 @@
+$html5-input-types: (
+  "color",
+  "date",
+  "datetime",
+  "datetime-local",
+  "email",
+  "month",
+  "number",
+  "range",
+  "search",
+  "tel",
+  "time",
+  "url",
+  "week"
+);
+
+$html4-input-types: (
+  "checkbox",
+  "file",
+  "password",
+  "radio",
+  "text"
+);
+
+$text-input-types: (
+  "email",
+  "number",
+  "password",
+  "search",
+  "tel",
+  "text",
+  "url"
+);
+
+$button-input-types: (
+  "button",
+  "reset",
+  "submit"
+);
+
+$all-input-types: join(
+                    join($html5-input-types, $html4-input-types),
+                    $button-input-types
+                  );
+
+$html5-inputs: createInputsList($html5-input-types);
+$html4-inputs: createInputsList($html4-input-types);
+$text-inputs: createInputsList($text-input-types);
+$button-inputs: createInputsList($button-input-types);
+$all-inputs: createInputsList($all-input-types);
