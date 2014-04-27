@@ -1,0 +1,40 @@
+/**
+ * Base Component `form`
+ *
+ * A form component for capturing user submitted data. This component is
+ * best applied to `form` elements. By default it has ...
+ *
+ * <form class="form">
+ *
+ * </form>
+ */
+
+fieldset {
+  padding: $base-spacing-unit;
+}
+
+textarea,
+select,
+#{$text-inputs} {
+  @include font-size($base-font-size * .85);
+  @include to-rem(padding, ($base-spacing-unit / 4));
+  @include to-rem(margin-top, ($base-spacing-unit * .5));
+  @include to-rem(margin-bottom, ($base-spacing-unit * .5));
+  display: block;
+  line-height: 1.2;
+  width: 100%;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+select[multiple],
+select[size] {
+  display: block;
+  height: auto;
+}

@@ -365,6 +365,9 @@ html {
   min-height: 100%;
   overflow-y: scroll; }
 
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 /**
  * Base Component `table`
  *
@@ -722,24 +725,49 @@ li > ol,
 li > dl {
   margin-bottom: 0; }
 
-.list--unstyled {
-  list-style-type: none; }
-
-.list--numbered {
-  list-style-type: decimal; }
+/**
+ * Modifier `list--[list-style-type]`
+ *
+ * A `list` modifier that sets the `list-style-type`. Relies on the
+ * `$list-style-types` map below.
+ *
+ * <ul class="list--disc">
+ *   <li>List item</li>
+ *   <li>List item</li>
+ *   <li>List item</li>
+ * </ul>
+ *
+ * 1. The `--numbered` modifier is offered so you can style a list with numbers
+ *    without relying on the `ol` element.
+ * 2. Removes the default padding on list elements.
+ */
+.list--circle {
+  list-style-type: circle; }
 
 .list--dot {
   list-style-type: disc; }
 
-.list--circle {
-  list-style-type: circle; }
+.list--numbered {
+  list-style-type: decimal; }
 
 .list--square {
   list-style-type: square; }
 
 .list--unstyled {
+  list-style-type: none; }
+
+.list--unstyled {
   padding-left: 0; }
 
+/**
+ * Modifier `list--description`
+ *
+ * A `list` modifier that styles the contents of a description list. Best used
+ * on a `dl` element, but can be styled with other elements by using the
+ * `.list--description` class and the appropriate element classes.
+ *
+ * 1. Remove the default `margin-left` applied to dd elements.
+ */
 dl dt,
 dl .list--description-title,
 .list--description dt,
@@ -750,3 +778,44 @@ dl .list--description-body,
 .list--description dd,
 .list--description .list--description-body {
   margin-left: 0; }
+
+/**
+ * Base Component `form`
+ *
+ * A form component for capturing user submitted data. This component is
+ * best applied to `form` elements. By default it has ...
+ *
+ * <form class="form">
+ *
+ * </form>
+ */
+fieldset {
+  padding: 24px; }
+
+textarea,
+select,
+input[type='email'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'] {
+  font-size: 13.6px;
+  font-size: 0.85rem;
+  padding: 6px;
+  padding: 0.375rem;
+  margin-top: 12px;
+  margin-top: 0.75rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+  display: block;
+  line-height: 1.2;
+  width: 100%; }
+  textarea:first-child,
+  select:first-child,
+  input[type='email']:first-child, input[type='number']:first-child, input[type='password']:first-child, input[type='search']:first-child, input[type='tel']:first-child, input[type='text']:first-child, input[type='url']:first-child {
+    margin-top: 0; }
+  textarea:last-child,
+  select:last-child,
+  input[type='email']:last-child, input[type='number']:last-child, input[type='password']:last-child, input[type='search']:last-child, input[type='tel']:last-child, input[type='text']:last-child, input[type='url']:last-child {
+    margin-bottom: 0; }
+
+select[multiple],
+select[size] {
+  display: block;
+  height: auto; }
