@@ -701,3 +701,52 @@ p {
 .lede {
   font-size: 21.344px;
   font-size: 1.334rem; }
+
+/**
+ * Base Component `list`
+ *
+ * <ul>
+ *   <li>List item</li>
+ *   <li>List item</li>
+ *   <li>List item</li>
+ * </ul>
+ *
+ * A list for displaying information in an organized manner. This component is
+ * best applied to table elements. By default it has a 1px border in
+ * `$dark-gray`, collapsed borders and no border spacing.
+ *
+ * 1. Remove any vertical spacing that might come in form nested lists.
+ */
+li > ul,
+li > ol,
+li > dl {
+  margin-bottom: 0; }
+
+.list--unstyled {
+  list-style-type: none; }
+
+.list--numbered {
+  list-style-type: decimal; }
+
+.list--dot {
+  list-style-type: disc; }
+
+.list--circle {
+  list-style-type: circle; }
+
+.list--square {
+  list-style-type: square; }
+
+.list--unstyled {
+  padding-left: 0; }
+
+dl dt,
+dl .list--description-title,
+.list--description dt,
+.list--description .list--description-title {
+  font-weight: bold; }
+dl dd,
+dl .list--description-body,
+.list--description dd,
+.list--description .list--description-body {
+  margin-left: 0; }

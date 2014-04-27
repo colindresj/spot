@@ -1,0 +1,80 @@
+/**
+ * Base Component `list`
+ *
+ * <ul>
+ *   <li>List item</li>
+ *   <li>List item</li>
+ *   <li>List item</li>
+ * </ul>
+ *
+ * A list for displaying information in an organized manner. This component is
+ * best applied to table elements. By default it has a 1px border in
+ * `$dark-gray`, collapsed borders and no border spacing.
+ *
+ * 1. Remove any vertical spacing that might come in form nested lists.
+ */
+
+li {
+  > ul,
+  > ol,
+  > dl {
+    margin-bottom: 0; // 1
+  }
+}
+
+/**
+ * Modifier `list--[list-style-type]`
+ *
+ * A `list` modifier that sets the `list-style-type`. Relies on the
+ * `$list-style-types` map below.
+ *
+ * <ul class="list--disc">
+ *   <li>List item</li>
+ *   <li>List item</li>
+ *   <li>List item</li>
+ * </ul>
+ *
+ * 1. The `--numbered` modifier is offered so you can style a list with numbers
+ *    without relying on the `ol` element.
+ * 2. Removes the default padding on list elements.
+ */
+
+$list-style-types: (
+  unstyled: none,
+  numbered: decimal,
+  dot: disc,
+  circle: circle,
+  square: square
+);
+
+@each $class, $style in $list-style-types {
+  .list--#{$class} {
+    list-style-type: $style;
+  }
+}
+
+.list--unstyled {
+  padding-left: 0; // 2
+}
+
+/**
+ * Modifier `list--description`
+ *
+ * A `list` modifier that styles the contents of a description list. Best used
+ * on a `dl` element, but can be styled with other elements by using the
+ * `.list--description` class and the appropriate element classes.
+ *
+ * 1. Remove the default `margin-left` applied to dd elements.
+ */
+
+dl,
+.list--description {
+  dt,
+  .list--description-title {
+    font-weight: bold;
+  }
+  dd,
+  .list--description-body {
+    margin-left: 0; // 1
+  }
+}
