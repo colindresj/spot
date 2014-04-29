@@ -13,3 +13,7 @@
   }
   @return $inputs;
 }
+
+@function gridCalc($col, $num-cols) {
+  @return percentage($col / $num-cols)
+}

@@ -819,3 +819,39 @@ select[multiple],
 select[size] {
   display: block;
   height: auto; }
+
+.u-width12of12, .u-width6of6, .u-width3of3 {
+  width: 100%; }
+
+.u-width11of12 {
+  width: 91.66667%; }
+
+.u-width10of12, .u-width5of6 {
+  width: 83.33333%; }
+
+.u-width9of12 {
+  width: 75%; }
+
+.u-width8of12, .u-width4of6, .u-width2of3 {
+  width: 66.66667%; }
+
+.u-width7of12 {
+  width: 58.33333%; }
+
+.u-width6of12, .u-width3of6 {
+  width: 50%; }
+
+.u-width5of12 {
+  width: 41.66667%; }
+
+.u-width4of12, .u-width2of6, .u-width1of3 {
+  width: 33.33333%; }
+
+.u-width3of12 {
+  width: 25%; }
+
+.u-width2of12, .u-width1of6 {
+  width: 16.66667%; }
+
+.u-width1of12 {
+  width: 8.33333%; }
