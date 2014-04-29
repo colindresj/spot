@@ -820,38 +820,38 @@ select[size] {
   display: block;
   height: auto; }
 
-.u-width12of12, .u-width6of6, .u-width3of3 {
+.u-width12of12, .u-width6of6, .u-width3of3, .u-width12of12Med, .u-width6of6Med, .u-width3of3Med, .u-width12of12Lg, .u-width6of6Lg, .u-width3of3Lg, .u-width12of12Xlg, .u-width6of6Xlg, .u-width3of3Xlg {
   width: 100%; }
 
-.u-width11of12 {
+.u-width11of12, .u-width11of12Med, .u-width11of12Lg, .u-width11of12Xlg {
   width: 91.66667%; }
 
-.u-width10of12, .u-width5of6 {
+.u-width10of12, .u-width5of6, .u-width10of12Med, .u-width5of6Med, .u-width10of12Lg, .u-width5of6Lg, .u-width10of12Xlg, .u-width5of6Xlg {
   width: 83.33333%; }
 
-.u-width9of12 {
+.u-width9of12, .u-width9of12Med, .u-width9of12Lg, .u-width9of12Xlg {
   width: 75%; }
 
-.u-width8of12, .u-width4of6, .u-width2of3 {
+.u-width8of12, .u-width4of6, .u-width2of3, .u-width8of12Med, .u-width4of6Med, .u-width2of3Med, .u-width8of12Lg, .u-width4of6Lg, .u-width2of3Lg, .u-width8of12Xlg, .u-width4of6Xlg, .u-width2of3Xlg {
   width: 66.66667%; }
 
-.u-width7of12 {
+.u-width7of12, .u-width7of12Med, .u-width7of12Lg, .u-width7of12Xlg {
   width: 58.33333%; }
 
-.u-width6of12, .u-width3of6 {
+.u-width6of12, .u-width3of6, .u-width6of12Med, .u-width3of6Med, .u-width6of12Lg, .u-width3of6Lg, .u-width6of12Xlg, .u-width3of6Xlg {
   width: 50%; }
 
-.u-width5of12 {
+.u-width5of12, .u-width5of12Med, .u-width5of12Lg, .u-width5of12Xlg {
   width: 41.66667%; }
 
-.u-width4of12, .u-width2of6, .u-width1of3 {
+.u-width4of12, .u-width2of6, .u-width1of3, .u-width4of12Med, .u-width2of6Med, .u-width1of3Med, .u-width4of12Lg, .u-width2of6Lg, .u-width1of3Lg, .u-width4of12Xlg, .u-width2of6Xlg, .u-width1of3Xlg {
   width: 33.33333%; }
 
-.u-width3of12 {
+.u-width3of12, .u-width3of12Med, .u-width3of12Lg, .u-width3of12Xlg {
   width: 25%; }
 
-.u-width2of12, .u-width1of6 {
+.u-width2of12, .u-width1of6, .u-width2of12Med, .u-width1of6Med, .u-width2of12Lg, .u-width1of6Lg, .u-width2of12Xlg, .u-width1of6Xlg {
   width: 16.66667%; }
 
-.u-width1of12 {
+.u-width1of12, .u-width1of12Med, .u-width1of12Lg, .u-width1of12Xlg {
   width: 8.33333%; }

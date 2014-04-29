@@ -1,1 +1,7 @@
-@include create-cols($num-cols);
+@if $responsive == true {
+  @each $size in "", "Med", "Lg", "Xlg" {
+    @include create-cols($num-cols, $size);
+  }
+} @else {
+  @include create-cols($num-cols);
+}

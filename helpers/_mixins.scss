@@ -7,7 +7,7 @@
   @include to-rem(font-size, $font-size);
 }
 
-@mixin create-cols($total) {
+@mixin create-cols($total, $size: "") {
   @if $total % 4 != 0 {
     @warn "$num-cols must be divisible by 4. You entered #{$total}.";
   }
@@ -15,12 +15,12 @@
     @if 4 % $i == 0 {
       $j: $total / $i;
       @while $j > 0 {
-        @if $i == 1 {
-          .u-width#{$j}of#{$total} {
+        @if $i == 1 and $size == "" {
+          .u-width#{$j}of#{$total}#{$size} {
             width: gridCalc($j, $total);
           }
         } @else {
-          .u-width#{$j}of#{$total / $i} {
+          .u-width#{$j}of#{$total / $i}#{$size} {
             @extend .u-width#{$j * $i}of#{$total};
           }
         }
