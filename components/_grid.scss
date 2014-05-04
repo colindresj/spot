@@ -1,7 +1,82 @@
+/**
+ * Component `grid`
+ *
+ * <div class="grid">
+ *  <div class="grid-col u-width3of12"></div>
+ *  <div class="grid-col u-width3of12">
+ *    <div class="grid">
+ *      <div class="grid-col u-width1of3"></div>
+ *      <div class="grid-col u-width1of3"></div>
+ *      <div class="grid-col u-width1of3"></div>
+ *    </div>
+ *  </div>
+ *  <div class="grid-col u-width3of12"></div>
+ *  <div class="grid-col u-width3of12"></div>
+ * </div>
+ *
+ * A `grid` component that can be used for predictably managing layouts. The
+ * `grid` component relies on `grid-col` elements.
+ *
+ * Width or other layout-affecting styles and classes should not be applied to
+ * the `grid` component, but instead to the `grid-col` elements.
+ *
+ * 1. Reset.
+ * 2. Remove whitespace that comes affects elements with display `inline-block`.
+ * 3. Counter the `padding-left` on the left-most `grid-col` element.
+ * 4. Remove the `margin-left` when `grid` components are directly nested.
+ */
+
 @if $responsive == true {
   @each $size in $sizes {
     @include create-cols($num-cols, $size);
   }
 } @else {
   @include create-cols($num-cols);
+}
+
+.grid {
+  display: block; // 1
+  font-size: 0; // 2
+  margin: 0 0 0 (-$col-gutter); // 3
+  padding: 0; // 1
+  text-align: left; // 1
+
+  > .grid {
+    margin: 0; // 4
+  }
+}
+
+.grid--colsCenter {
+  text-align: center;
+}
+
+.grid--colsRight {
+  text-align: right;
+}
+
+/**
+ * Element `grid-col`
+ *
+ * A `grid-col` element that for the `grid` component. Though not  mandatory,
+ * the best way to manage column widths is by using the  `u-width[n]of[n]`
+ * utility.
+ *
+ * 1. Used instead of floating.
+ * 2. Reset the font-size.
+ * 3. Reset the default `vertical-align` for proper vertical positioning.
+ * 4. Default to full width.
+ */
+
+.grid-col {
+  display: inline-block; // 1
+  font-size: $base-font-size; // 2
+  padding-left: $col-gutter;
+  vertical-align: top; // 3
+  width: 100%; // 4
+}
+
+.grid-col--centered {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
 }
