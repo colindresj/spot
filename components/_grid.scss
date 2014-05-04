@@ -26,14 +26,6 @@
  * 4. Remove the `margin-left` when `grid` components are directly nested.
  */
 
-@if $responsive == true {
-  @each $size in $sizes {
-    @include create-cols($num-cols, $size);
-  }
-} @else {
-  @include create-cols($num-cols);
-}
-
 .grid {
   display: block; // 1
   font-size: 0; // 2
