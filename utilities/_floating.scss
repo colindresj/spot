@@ -1,0 +1,31 @@
+/**
+ * Utility floating
+ *   `left`, `right`
+ */
+
+.u-left {
+  float: left;
+}
+
+.u-right {
+  float: right;
+}
+
+/**
+ * Utility `cf`
+ *
+ * The clearfix utility, which is used to contain floated child HTML elements.
+ * This clearfix uses pseudo elements is based of the micro clearfix.
+ */
+
+.u-cf {
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
