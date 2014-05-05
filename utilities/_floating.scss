@@ -1,13 +1,15 @@
 /**
- * Utility floating
- *   `left`, `right`
+ * Utility `float`
+ *
+ * A `float` utility that consists of a two modifiers and no unmodified
+ * utility class.
  */
 
-.u-left {
+.u-float--left {
   float: left;
 }
 
-.u-right {
+.u-float--right {
   float: right;
 }
 

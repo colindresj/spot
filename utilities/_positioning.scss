@@ -1,21 +1,23 @@
 /**
- * Utility positioning
- *   `static`, `relative`, `absolute`, `fixed`, `full`, `verticalCenter`
+ * Utility `pos`
+ *
+ * A `pos` utility that consists of a four modifiers and no unmodified
+ * utility class.
  */
 
-.u-static {
+.u-pos--static {
   position: static;
 }
 
-.u-relative {
+.u-pos--relative {
   position: relative;
 }
 
-.u-absolute {
+.u-pos--absolute {
   position: absolute;
 }
 
-.u-fixed {
+.u-pos--fixed {
   position: fixed;
 }
 

@@ -1,30 +1,31 @@
 /**
- * Utility display
- *   `inline`, `block`, `inlineBlock`, `table`, `tableRow`, `tableCell`,
- *   `hidden`, `invisible`, `blockCenter`
+ * Utility `disp`
+ *
+ * A `disp` utility that consists of a many modifiers and no unmodified
+ * utility class.
  */
 
-.u-inline {
+.u-disp--inline {
   display: inline;
 }
 
-.u-block {
+.u-disp--block {
   display: block;
 }
 
-.u-inlineBlock {
+.u-disp--inlineBlock {
   display: inline-block;
 }
 
-.u-table {
+.u-disp--table {
   display: table;
 }
 
-.u-tableRow {
+.u-disp--tableRow {
   display: table-row;
 }
 
-.u-tableCell {
+.u-disp--tableCell {
   display: table-cell;
 }
 
