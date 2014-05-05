@@ -1,0 +1,47 @@
+/**
+ * Utility positioning
+ *   `static`, `relative`, `absolute`, `fixed`, `full`, `verticalCenter`
+ */
+
+.u-static {
+  position: static;
+}
+
+.u-relative {
+  position: relative;
+}
+
+.u-absolute {
+  position: absolute;
+}
+
+.u-fixed {
+  position: fixed;
+}
+
+/**
+ * Utility `full`
+ *
+ * Covers the entire area of the nearest ancestor HTML element with position
+ * set to `relative`.
+ */
+
+.u-full {
+  bottom: 0; // 1
+  left: 0; // 1
+  position: absolute; // 1
+  right: 0; // 1
+  top: 0; // 1
+}
+
+/**
+ * Utility `verticalCenter`
+ *
+ * Vertically centers an HTML element inside its parent.
+ */
+
+.u-verticalCenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
