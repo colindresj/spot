@@ -1,0 +1,69 @@
+/**
+ * Utility display
+ *   `inline`, `block`, `inlineBlock`, `table`, `tableRow`, `tableCell`,
+ *   `hidden`, `invisible`, `blockCenter`
+ */
+
+.u-inline {
+  display: inline;
+}
+
+.u-block {
+  display: block;
+}
+
+.u-inlineBlock {
+  display: inline-block;
+}
+
+.u-table {
+  display: table;
+}
+
+.u-tableRow {
+  display: table-row;
+}
+
+.u-tableCell {
+  display: table-cell;
+}
+
+.u-hidden {
+  display: none;
+}
+
+.u-shown {
+  @extend .u-block;
+}
+
+.u-visible {
+  visibility: visible;
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.u-blockCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * Utility `replaceImage`
+ *
+ * An image replacement utility. Useful for logos or other text-based graphics.
+ *
+ * <h1 class="u-replaceImage">
+ *   <a href="/">
+ *     <img src="logo.png" alt="Logo Text" />
+ *   </a>
+ * </h1>
+ */
+
+.u-replaceImage {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
