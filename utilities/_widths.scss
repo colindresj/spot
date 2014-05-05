@@ -1,7 +1,20 @@
-@if $responsive == true {
-  @each $size in $sizes {
-    @include create-cols($num-cols, $size);
+/**
+ * Utility widths
+ *
+ * Builds out a series of width utility components. These are most commonly used
+ * when building a grid as an adjacent class of the `grid-col` elements. The
+ * generated widths are all percentage based.
+ *
+ * 1. If responsive, will generate width components that are prefixed according
+ *    to the `$sizes` list.
+ * 2. Relies on the `create-cols` mixin, which itself relies on the `gridCalc`
+ *    function.
+ */
+
+@if $responsive == true { // 1
+  @each $size in $sizes { // 1
+    @include create-cols($num-cols, $size); // 2
   }
 } @else {
-  @include create-cols($num-cols);
+  @include create-cols($num-cols); // 2
 }
