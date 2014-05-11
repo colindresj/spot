@@ -847,42 +847,6 @@ select[size] {
  * 3. Counter the `padding-left` on the left-most `grid-col` element.
  * 4. Remove the `margin-left` when `grid` components are directly nested.
  */
-.u-width12of12, .u-width6of6, .u-width3of3, .u-width12of12M, .u-width6of6M, .u-width3of3M, .u-width12of12L, .u-width6of6L, .u-width3of3L, .u-width12of12Xl, .u-width6of6Xl, .u-width3of3Xl {
-  width: 100%; }
-
-.u-width11of12, .u-width11of12M, .u-width11of12L, .u-width11of12Xl {
-  width: 91.66667%; }
-
-.u-width10of12, .u-width5of6, .u-width10of12M, .u-width5of6M, .u-width10of12L, .u-width5of6L, .u-width10of12Xl, .u-width5of6Xl {
-  width: 83.33333%; }
-
-.u-width9of12, .u-width9of12M, .u-width9of12L, .u-width9of12Xl {
-  width: 75%; }
-
-.u-width8of12, .u-width4of6, .u-width2of3, .u-width8of12M, .u-width4of6M, .u-width2of3M, .u-width8of12L, .u-width4of6L, .u-width2of3L, .u-width8of12Xl, .u-width4of6Xl, .u-width2of3Xl {
-  width: 66.66667%; }
-
-.u-width7of12, .u-width7of12M, .u-width7of12L, .u-width7of12Xl {
-  width: 58.33333%; }
-
-.u-width6of12, .u-width3of6, .u-width6of12M, .u-width3of6M, .u-width6of12L, .u-width3of6L, .u-width6of12Xl, .u-width3of6Xl {
-  width: 50%; }
-
-.u-width5of12, .u-width5of12M, .u-width5of12L, .u-width5of12Xl {
-  width: 41.66667%; }
-
-.u-width4of12, .u-width2of6, .u-width1of3, .u-width4of12M, .u-width2of6M, .u-width1of3M, .u-width4of12L, .u-width2of6L, .u-width1of3L, .u-width4of12Xl, .u-width2of6Xl, .u-width1of3Xl {
-  width: 33.33333%; }
-
-.u-width3of12, .u-width3of12M, .u-width3of12L, .u-width3of12Xl {
-  width: 25%; }
-
-.u-width2of12, .u-width1of6, .u-width2of12M, .u-width1of6M, .u-width2of12L, .u-width1of6L, .u-width2of12Xl, .u-width1of6Xl {
-  width: 16.66667%; }
-
-.u-width1of12, .u-width1of12M, .u-width1of12L, .u-width1of12Xl {
-  width: 8.33333%; }
-
 .grid {
   display: block;
   font-size: 0;
@@ -922,6 +886,18 @@ select[size] {
   margin: 0 auto;
   padding: 0; }
 
+/**
+ * Utility widths
+ *
+ * Builds out a series of width utility components. These are most commonly used
+ * when building a grid as an adjacent class of the `grid-col` elements. The
+ * generated widths are all percentage based.
+ *
+ * 1. If responsive, will generate width components that are prefixed according
+ *    to the `$sizes` list.
+ * 2. Relies on the `create-cols` mixin, which itself relies on the `gridCalc`
+ *    function.
+ */
 .u-width12of12, .u-width6of6, .u-width3of3, .u-width12of12M, .u-width6of6M, .u-width3of3M, .u-width12of12L, .u-width6of6L, .u-width3of3L, .u-width12of12Xl, .u-width6of6Xl, .u-width3of3Xl {
   width: 100%; }
 
@@ -957,3 +933,165 @@ select[size] {
 
 .u-width1of12, .u-width1of12M, .u-width1of12L, .u-width1of12Xl {
   width: 8.33333%; }
+
+.u-text--left {
+  text-align: left; }
+
+.u-text--right {
+  text-align: right; }
+
+.u-text--center {
+  text-align: center; }
+
+.u-text--bold {
+  text-align: 800; }
+
+.u-text--semiBold {
+  text-align: 600; }
+
+.u-text--light {
+  text-align: 300; }
+
+.u-text--ultraLight {
+  text-align: 200; }
+
+.u-text--breakWord {
+  word-wrap: break-word; }
+
+.u-text--noWrap, .u-text--truncate {
+  white-space: nowrap; }
+
+/**
+ * Modifier `--truncate`
+ *
+ * Stops text from continue past the defined width on the first line and
+ * truncates with an ellipsis. This modifier relies on the `truncate-text`
+ * mixin, which accepts a `$width` argument. By default the `$width` is set to
+ * 100%. This modifier uses the default width.
+ */
+.u-text--truncate {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  word-wrap: normal; }
+
+/**
+ * Utility `pos`
+ *
+ * A `pos` utility that consists of a four modifiers and no unmodified
+ * utility class.
+ */
+.u-pos--static {
+  position: static; }
+
+.u-pos--relative {
+  position: relative; }
+
+.u-pos--absolute {
+  position: absolute; }
+
+.u-pos--fixed {
+  position: fixed; }
+
+/**
+ * Utility `full`
+ *
+ * Covers the entire area of the nearest ancestor HTML element with position
+ * set to `relative`.
+ */
+.u-full {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+/**
+ * Utility `verticalCenter`
+ *
+ * Vertically centers an HTML element inside its parent.
+ */
+.u-verticalCenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+/**
+ * Utility `float`
+ *
+ * A `float` utility that consists of a two modifiers and no unmodified
+ * utility class.
+ */
+.u-float--left {
+  float: left; }
+
+.u-float--right {
+  float: right; }
+
+/**
+ * Utility `cf`
+ *
+ * The clearfix utility, which is used to contain floated child HTML elements.
+ * This clearfix uses pseudo elements is based of the micro clearfix.
+ */
+.u-cf::before, .u-cf::after {
+  content: ' ';
+  display: table; }
+.u-cf:after {
+  clear: both; }
+
+/**
+ * Utility `disp`
+ *
+ * A `disp` utility that consists of a many modifiers and no unmodified
+ * utility class.
+ */
+.u-disp--inline {
+  display: inline; }
+
+.u-disp--block, .u-shown {
+  display: block; }
+
+.u-disp--inlineBlock {
+  display: inline-block; }
+
+.u-disp--table {
+  display: table; }
+
+.u-disp--tableRow {
+  display: table-row; }
+
+.u-disp--tableCell {
+  display: table-cell; }
+
+.u-hidden {
+  display: none; }
+
+.u-visible {
+  visibility: visible; }
+
+.u-invisible {
+  visibility: hidden; }
+
+.u-blockCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/**
+ * Utility `replaceImage`
+ *
+ * An image replacement utility. Useful for logos or other text-based graphics.
+ *
+ * <h1 class="u-replaceImage">
+ *   <a href="/">
+ *     <img src="logo.png" alt="Logo Text" />
+ *   </a>
+ * </h1>
+ */
+.u-replaceImage {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap; }

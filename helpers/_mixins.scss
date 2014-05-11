@@ -31,7 +31,7 @@
 }
 
 @mixin truncate-text($width: 100%) {
-  @extend .u-text-noWrap;
+  @extend .u-text--noWrap;
   display: inline-block;
   max-width: 100%;
   overflow: hidden;
