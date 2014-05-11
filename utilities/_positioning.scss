@@ -1,24 +1,15 @@
 /**
  * Utility `pos`
  *
- * A `pos` utility that consists of a four modifiers and no unmodified
- * utility class.
+ * A `pos` utility that consists of four modifiers and no unmodified utility
+ * class. The loop builds the following classes: `--static`, `--relative`,
+ * `--absolute` and `--fixed`.
  */
 
-.u-pos--static {
-  position: static;
-}
-
-.u-pos--relative {
-  position: relative;
-}
-
-.u-pos--absolute {
-  position: absolute;
-}
-
-.u-pos--fixed {
-  position: fixed;
+@each $position in (static, relative, absolute, fixed) {
+  .u-pos--#{$position} {
+    position: $position;
+  }
 }
 
 /**
@@ -29,11 +20,11 @@
  */
 
 .u-full {
-  bottom: 0; // 1
-  left: 0; // 1
-  position: absolute; // 1
-  right: 0; // 1
-  top: 0; // 1
+  @extend .u-pos--absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 /**
@@ -43,7 +34,7 @@
  */
 
 .u-verticalCenter {
-  position: relative;
+  @extend .u-pos--relative;
   top: 50%;
   transform: translateY(-50%);
 }
