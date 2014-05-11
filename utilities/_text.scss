@@ -1,0 +1,53 @@
+// TODO: refactor all utils into loops
+.u-text--left {
+  text-align: left;
+}
+
+.u-text--right {
+  text-align: right;
+}
+
+.u-text--center {
+  text-align: center;
+}
+
+.u-text--bold {
+  font-weight: 800;
+}
+
+.u-text--semiBold {
+  font-weight: 600;
+}
+
+.u-text--normal {
+  font-weight: 400;
+}
+
+.u-text--light {
+  font-weight: 300;
+}
+
+.u-text--ultraLight {
+  font-weight: 200;
+}
+
+.u-text--breakWord {
+  word-wrap: break-word;
+}
+
+.u-text--noWrap {
+  white-space: nowrap;
+}
+
+/**
+ * Modifier `--truncate`
+ *
+ * Stops text from continue past the defined width on the first line and
+ * truncates with an ellipsis. This modifier relies on the `truncate-text`
+ * mixin, which accepts a `$width` argument. By default the `$width` is set to
+ * 100%. This modifier uses the default width.
+ */
+
+.u-text--truncate {
+  @include truncate-text;
+}
