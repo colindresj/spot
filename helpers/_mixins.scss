@@ -32,7 +32,7 @@
 
 @mixin truncate-text($width: 100%) {
   @extend .u-text--noWrap;
-  display: inline-block;
+  @extend .u-disp--block;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
