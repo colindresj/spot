@@ -1,0 +1,112 @@
+/**
+ * Utility `padding[direction]`
+ *
+ * A series of spacing utilities for consistent padding in any direction and
+ * with no un-modified class.
+ *
+ * 1. For convenience, class names are aliased to an abbreviated form that uses
+ *    'p' plus the first letter of the direction. For example, `.u-paddingTop`
+ *    can be aliased to `.u-pt`.
+ */
+
+.u-pt--small, // 1
+.u-paddingTop--small {
+  padding-top: $small-space;
+}
+
+.u-pr--small, // 1
+.u-paddingRight--small {
+  padding-right: $small-space;
+}
+
+.u-pb--small, // 1
+.u-paddingBottom--small {
+  padding-bottom: $small-space;
+}
+
+.u-pl--small, // 1
+.u-paddingLeft--small {
+  padding-left: $small-space;
+}
+
+.u-pv--small, // 1
+.u-paddingVertical--small {
+  @extend .u-pt--small;
+  @extend .u-pb--small;
+}
+
+.u-pa--small, // 1
+.u-paddingAll--small {
+  @extend .u-pt--small;
+  @extend .u-pr--small;
+  @extend .u-pb--small;
+  @extend .u-pl--small;
+}
+
+.u-pt--medium, // 1
+.u-paddingTop--medium {
+  padding-top: $medium-space;
+}
+
+.u-pr--medium, // 1
+.u-paddingRight--medium {
+  padding-right: $medium-space;
+}
+
+.u-pb--medium, // 1
+.u-paddingBottom--medium {
+  padding-bottom: $medium-space;
+}
+
+.u-pl--medium, // 1
+.u-paddingLeft--medium {
+  padding-left: $medium-space;
+}
+
+.u-pv--medium, // 1
+.u-paddingVertical--medium {
+  @extend .u-pt--medium;
+  @extend .u-pb--medium;
+}
+
+.u-pa--medium, // 1
+.u-paddingAll--medium {
+  @extend .u-pt--medium;
+  @extend .u-pr--medium;
+  @extend .u-pb--medium;
+  @extend .u-pl--medium;
+}
+
+.u-pt--large, // 1
+.u-paddingTop--large {
+  padding-top: $large-space;
+}
+
+.u-pr--large, // 1
+.u-paddingRight--large {
+  padding-right: $large-space;
+}
+
+.u-pb--large, // 1
+.u-paddingBottom--large {
+  padding-bottom: $large-space;
+}
+
+.u-pl--large, // 1
+.u-paddingLeft--large {
+  padding-left: $large-space;
+}
+
+.u-pv--large, // 1
+.u-paddingVertical--large {
+  @extend .u-pt--large;
+  @extend .u-pb--large;
+}
+
+.u-pa--large, // 1
+.u-paddingAll--large {
+  @extend .u-pt--large;
+  @extend .u-pr--large;
+  @extend .u-pb--large;
+  @extend .u-pl--large;
+}
