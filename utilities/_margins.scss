@@ -1,0 +1,130 @@
+/**
+ * Utility `margin[direction]`
+ *
+ * A series of spacing utilities for consistent margin in any direction and
+ * with no un-modified class.
+ *
+ * 1. For convenience, class names are aliased to an abbreviated form that uses
+ *    'm' mlus the first letter of the direction. For exammle, `.u-marginTop`
+ *    can be aliased to `.u-mt`.
+ */
+
+.u-mt--small, // 1
+.u-marginTop--small {
+  margin-top: $small-space;
+}
+
+.u-mr--small, // 1
+.u-marginRight--small {
+  margin-right: $small-space;
+}
+
+.u-mb--small, // 1
+.u-marginBottom--small {
+  margin-bottom: $small-space;
+}
+
+.u-ml--small, // 1
+.u-marginLeft--small {
+  margin-left: $small-space;
+}
+
+.u-mv--small, // 1
+.u-marginVertical--small {
+  @extend .u-mt--small;
+  @extend .u-mb--small;
+}
+
+.u-mh--small, // 1
+.u-marginHorizontal--small {
+  @extend .u-mr--small;
+  @extend .u-ml--small;
+}
+
+.u-ma--small, // 1
+.u-marginAll--small {
+  @extend .u-mt--small;
+  @extend .u-mr--small;
+  @extend .u-mb--small;
+  @extend .u-ml--small;
+}
+
+.u-mt--medium, // 1
+.u-marginTop--medium {
+  margin-top: $medium-space;
+}
+
+.u-mr--medium, // 1
+.u-marginRight--medium {
+  margin-right: $medium-space;
+}
+
+.u-mb--medium, // 1
+.u-marginBottom--medium {
+  margin-bottom: $medium-space;
+}
+
+.u-ml--medium, // 1
+.u-marginLeft--medium {
+  margin-left: $medium-space;
+}
+
+.u-mv--medium, // 1
+.u-marginVertical--medium {
+  @extend .u-mt--medium;
+  @extend .u-mb--medium;
+}
+
+.u-mh--medium, // 1
+.u-marginHorizontal--medium {
+  @extend .u-mr--medium;
+  @extend .u-ml--medium;
+}
+
+.u-ma--medium, // 1
+.u-marginAll--medium {
+  @extend .u-mt--medium;
+  @extend .u-mr--medium;
+  @extend .u-mb--medium;
+  @extend .u-ml--medium;
+}
+
+.u-mt--large, // 1
+.u-marginTop--large {
+  margin-top: $large-space;
+}
+
+.u-mr--large, // 1
+.u-marginRight--large {
+  margin-right: $large-space;
+}
+
+.u-mb--large, // 1
+.u-marginBottom--large {
+  margin-bottom: $large-space;
+}
+
+.u-ml--large, // 1
+.u-marginLeft--large {
+  margin-left: $large-space;
+}
+
+.u-mv--large, // 1
+.u-marginVertical--large {
+  @extend .u-mt--large;
+  @extend .u-mb--large;
+}
+
+.u-mh--large, // 1
+.u-marginHorizontal--large {
+  @extend .u-mr--large;
+  @extend .u-ml--large;
+}
+
+.u-ma--large, // 1
+.u-marginAll--large {
+  @extend .u-mt--large;
+  @extend .u-mr--large;
+  @extend .u-mb--large;
+  @extend .u-ml--large;
+}

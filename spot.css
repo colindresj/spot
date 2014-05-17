@@ -934,6 +934,18 @@ select[size] {
 .u-width1of12, .u-width1of12M, .u-width1of12L, .u-width1of12Xl {
   width: 8.33333%; }
 
+/**
+ * Utility `text`
+ *
+ * A text and font formatting and alignment utility that consists of a series of
+ * alignment, weight and wordrapping modifiers and no un-modified class.
+ */
+/**
+ * Modifier `--[alignment]`
+ *
+ * Produces alignment modidifers for left, center and right text alignment. The
+ * loop builds the following classes: `--left`, `--right`, and `--center`.
+ */
 .u-text--left {
   text-align: left; }
 
@@ -943,18 +955,33 @@ select[size] {
 .u-text--center {
   text-align: center; }
 
+/**
+ * Modifier `--[font weight]`
+ *
+ * Produces font weight modidifers for bold, semi-bold, light and ultra-light
+ * font weights. The loops builds the following classes:
+ *   `--bold`: 800 `font-weight`
+ *   `--semiBold`: 600 `font-weight`
+ *   `--light`: 300 `font-weight`
+ *   `--ultraLight`: 200 `font-weight`
+ */
 .u-text--bold {
-  text-align: 800; }
+  font-weight: 800; }
 
 .u-text--semiBold {
-  text-align: 600; }
+  font-weight: 600; }
 
 .u-text--light {
-  text-align: 300; }
+  font-weight: 300; }
 
 .u-text--ultraLight {
-  text-align: 200; }
+  font-weight: 200; }
 
+/**
+ * Modifier `--[word wrap style]`
+ *
+ * Determine how to wrap text at the end of a line.
+ */
 .u-text--breakWord {
   word-wrap: break-word; }
 
@@ -970,7 +997,6 @@ select[size] {
  * 100%. This modifier uses the default width.
  */
 .u-text--truncate {
-  display: inline-block;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -980,16 +1006,17 @@ select[size] {
 /**
  * Utility `pos`
  *
- * A `pos` utility that consists of a four modifiers and no unmodified
- * utility class.
+ * A `pos` utility that consists of four modifiers and no unmodified utility
+ * class. The loop builds the following classes: `--static`, `--relative`,
+ * `--absolute` and `--fixed`.
  */
 .u-pos--static {
   position: static; }
 
-.u-pos--relative {
+.u-pos--relative, .u-verticalCenter {
   position: relative; }
 
-.u-pos--absolute {
+.u-pos--absolute, .u-full {
   position: absolute; }
 
 .u-pos--fixed {
@@ -1004,7 +1031,6 @@ select[size] {
 .u-full {
   bottom: 0;
   left: 0;
-  position: absolute;
   right: 0;
   top: 0; }
 
@@ -1014,7 +1040,6 @@ select[size] {
  * Vertically centers an HTML element inside its parent.
  */
 .u-verticalCenter {
-  position: relative;
   top: 50%;
   transform: translateY(-50%); }
 
@@ -1051,7 +1076,7 @@ select[size] {
 .u-disp--inline {
   display: inline; }
 
-.u-disp--block, .u-shown {
+.u-disp--block, .u-text--truncate, .u-shown {
   display: block; }
 
 .u-disp--inlineBlock {
@@ -1095,3 +1120,167 @@ select[size] {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap; }
+
+/**
+ * Utility `padding[direction]`
+ *
+ * A series of spacing utilities for consistent padding in any direction and
+ * with no un-modified class.
+ *
+ * 1. For convenience, class names are aliased to an abbreviated form that uses
+ *    'p' plus the first letter of the direction. For example, `.u-paddingTop`
+ *    can be aliased to `.u-pt`.
+ */
+.u-pt--small, .u-pv--small,
+.u-paddingVertical--small, .u-pa--small,
+.u-paddingAll--small,
+.u-paddingTop--small {
+  padding-top: 10px; }
+
+.u-pr--small, .u-ph--small,
+.u-paddingHorizontal--small, .u-pa--small,
+.u-paddingAll--small,
+.u-paddingRight--small {
+  padding-right: 10px; }
+
+.u-pb--small, .u-pv--small,
+.u-paddingVertical--small, .u-pa--small,
+.u-paddingAll--small,
+.u-paddingBottom--small {
+  padding-bottom: 10px; }
+
+.u-pl--small, .u-ph--small,
+.u-paddingHorizontal--small, .u-pa--small,
+.u-paddingAll--small,
+.u-paddingLeft--small {
+  padding-left: 10px; }
+
+.u-pt--medium, .u-pv--medium,
+.u-paddingVertical--medium, .u-pa--medium,
+.u-paddingAll--medium,
+.u-paddingTop--medium {
+  padding-top: 20px; }
+
+.u-pr--medium, .u-ph--medium,
+.u-paddingHorizontal--medium, .u-pa--medium,
+.u-paddingAll--medium,
+.u-paddingRight--medium {
+  padding-right: 20px; }
+
+.u-pb--medium, .u-pv--medium,
+.u-paddingVertical--medium, .u-pa--medium,
+.u-paddingAll--medium,
+.u-paddingBottom--medium {
+  padding-bottom: 20px; }
+
+.u-pl--medium, .u-ph--medium,
+.u-paddingHorizontal--medium, .u-pa--medium,
+.u-paddingAll--medium,
+.u-paddingLeft--medium {
+  padding-left: 20px; }
+
+.u-pt--large, .u-pv--large,
+.u-paddingVertical--large, .u-pa--large,
+.u-paddingAll--large,
+.u-paddingTop--large {
+  padding-top: 30px; }
+
+.u-pr--large, .u-ph--large,
+.u-paddingHorizontal--large, .u-pa--large,
+.u-paddingAll--large,
+.u-paddingRight--large {
+  padding-right: 30px; }
+
+.u-pb--large, .u-pv--large,
+.u-paddingVertical--large, .u-pa--large,
+.u-paddingAll--large,
+.u-paddingBottom--large {
+  padding-bottom: 30px; }
+
+.u-pl--large, .u-ph--large,
+.u-paddingHorizontal--large, .u-pa--large,
+.u-paddingAll--large,
+.u-paddingLeft--large {
+  padding-left: 30px; }
+
+/**
+ * Utility `margin[direction]`
+ *
+ * A series of spacing utilities for consistent margin in any direction and
+ * with no un-modified class.
+ *
+ * 1. For convenience, class names are aliased to an abbreviated form that uses
+ *    'm' mlus the first letter of the direction. For exammle, `.u-marginTop`
+ *    can be aliased to `.u-mt`.
+ */
+.u-mt--small, .u-mv--small,
+.u-marginVertical--small, .u-ma--small,
+.u-marginAll--small,
+.u-marginTop--small {
+  margin-top: 10px; }
+
+.u-mr--small, .u-mh--small,
+.u-marginHorizontal--small, .u-ma--small,
+.u-marginAll--small,
+.u-marginRight--small {
+  margin-right: 10px; }
+
+.u-mb--small, .u-mv--small,
+.u-marginVertical--small, .u-ma--small,
+.u-marginAll--small,
+.u-marginBottom--small {
+  margin-bottom: 10px; }
+
+.u-ml--small, .u-mh--small,
+.u-marginHorizontal--small, .u-ma--small,
+.u-marginAll--small,
+.u-marginLeft--small {
+  margin-left: 10px; }
+
+.u-mt--medium, .u-mv--medium,
+.u-marginVertical--medium, .u-ma--medium,
+.u-marginAll--medium,
+.u-marginTop--medium {
+  margin-top: 20px; }
+
+.u-mr--medium, .u-mh--medium,
+.u-marginHorizontal--medium, .u-ma--medium,
+.u-marginAll--medium,
+.u-marginRight--medium {
+  margin-right: 20px; }
+
+.u-mb--medium, .u-mv--medium,
+.u-marginVertical--medium, .u-ma--medium,
+.u-marginAll--medium,
+.u-marginBottom--medium {
+  margin-bottom: 20px; }
+
+.u-ml--medium, .u-mh--medium,
+.u-marginHorizontal--medium, .u-ma--medium,
+.u-marginAll--medium,
+.u-marginLeft--medium {
+  margin-left: 20px; }
+
+.u-mt--large, .u-mv--large,
+.u-marginVertical--large, .u-ma--large,
+.u-marginAll--large,
+.u-marginTop--large {
+  margin-top: 30px; }
+
+.u-mr--large, .u-mh--large,
+.u-marginHorizontal--large, .u-ma--large,
+.u-marginAll--large,
+.u-marginRight--large {
+  margin-right: 30px; }
+
+.u-mb--large, .u-mv--large,
+.u-marginVertical--large, .u-ma--large,
+.u-marginAll--large,
+.u-marginBottom--large {
+  margin-bottom: 30px; }
+
+.u-ml--large, .u-mh--large,
+.u-marginHorizontal--large, .u-ma--large,
+.u-marginAll--large,
+.u-marginLeft--large {
+  margin-left: 30px; }
