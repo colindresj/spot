@@ -39,3 +39,14 @@
   width: $width;
   word-wrap: normal;
 }
+
+@mixin make-contextual($color, $bg: true) {
+  $color-type: if($bg, $dark-gray, $color);
+
+  @if $bg { background: $color; }
+  color: $color-type;
+
+  a:hover {
+    color: darken($color-type, 25%);
+  }
+}

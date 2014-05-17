@@ -177,7 +177,8 @@ Multiple modifier classes can be applied at once to construct structure.
 ```
 
 ###Component State Modifier
-A component state modifier is a special type of modifier class that adds styles to a component that is an a particular state, such as an error state. These classes typically get added using Javascript. State modifiers can be applied to all components, but each component should style its own state modifiers. **State modifiers should only be styled as adjoining classes.**
+A component state modifier is a special type of modifier class that adds styles to a component that is a particular state, such as an error state. These classes often times get added or removed using Javascript. The framework comes
+with a small set of base state modifiers, but each component can style its own modifiers. **Component specific state modifiers should only be styled as adjoining classes.**
 ```scss
 .componentName {
   &.is-atState {

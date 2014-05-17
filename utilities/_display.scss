@@ -29,22 +29,6 @@
   display: table-cell;
 }
 
-.u-hidden {
-  display: none;
-}
-
-.u-shown {
-  @extend .u-disp--block;
-}
-
-.u-visible {
-  visibility: visible;
-}
-
-.u-invisible {
-  visibility: hidden;
-}
-
 .u-blockCenter {
   display: block;
   margin-left: auto;

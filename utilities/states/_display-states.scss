@@ -1,0 +1,46 @@
+.is-invisible {
+  visibility: hidden;
+}
+
+.is-visible {
+  visibility: visible;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-shown {
+  @extend .is-visible;
+  @extend .u-disp--block;
+}
+
+table.is-shown {
+  @extend .is-visible;
+  @extend .u-disp--table;
+}
+
+tr.is-shown {
+  @extend .is-visible;
+  @extend .u-disp--tableRow;
+}
+
+td.is-shown,
+th.is-shown {
+  @extend .is-visible;
+  @extend .u-disp--tableCell;
+}
+
+.is-forScreenReaders { // 1
+  @extend .u-pos--absolute;
+  border: 0;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  width: 1px;
+}
+
+.is-centered {
+  @extend .u-blockCenter;
+}
