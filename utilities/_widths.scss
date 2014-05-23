@@ -18,3 +18,28 @@
 } @else {
   @include create-cols($num-cols); // 2
 }
+
+/**
+ * Utility human widths
+ *
+ * Builds out an additional series of width utility components that are more in
+ * a more human readable format. The generated widths are all percentage based.
+ *
+ * 1. Will only be compiled if the option is set.
+ */
+
+@if $human-widths {
+  $widths: (
+    OneEigth: 12.5%, OneFourth: 25%, OneThird: 33.33%, ThreeEigths: 37.5%,
+    OneHalf: 50%, FiveEigths: 62.5%, TwoThirds: 66.666%, ThreeQuarters: 75%,
+    SevenEigths: 87.5%, Full: 100%
+  );
+
+  @each $class, $width in $widths {
+    .u-width#{$class} {
+      width: $width;
+    }
+  }
+}
+
+

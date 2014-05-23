@@ -51,28 +51,6 @@
   border: 1px solid $dark-gray;
 }
 
-$table-widths: (
-  oneEigth: 12.5%, oneFourth: 25%, oneThird: 33.33%, threeEigths: 37.5%,
-  oneHalf: 50%, fiveEigths: 62.5%, twoThirds: 66.666%, threeQuarters: 75%,
-  sevenEigths: 87.5%, full: 100%
-);
-
-/**
- * Modifier `table--*`
- *
- * A `table` modifier that sets the table width.
- *
- * 1. Width based modifiers (ex. table--oneThird) will determine the length of
- *    the table in percentages, and so are relative to the width of its parent.
- *    The `$table-widths` map specifies all the table width modifiers available.
- */
-
-@each $class, $width in $table-widths {
-  .table--#{$class} { // 1
-    width: $width;
-  }
-}
-
 .table--striped {
   tbody tr:nth-of-type(odd){
     background-color: $light-gray;
@@ -102,19 +80,5 @@ $table-widths: (
 .table--hoverRow {
   tbody tr:hover {
     background: $light-gray;
-  }
-}
-
-/**
- * Base Element `table-col`
- *
- * A `table-col` element that consists of a single modifier and no unmodified
- * element. The modifier attribute sets proportional column widths and relies on
- * the `$table-widths` map from above.
- */
-
-@each $class, $width in $table-widths {
-  .table-col--#{$class} {
-    width: $width;
   }
 }

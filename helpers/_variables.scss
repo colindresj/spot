@@ -11,6 +11,7 @@ $code-text: darken($code-highlight, 70%);
 
 // Grid
 $col-gutter: $base-spacing-unit;
+$human-widths: true;
 $num-cols: 12;
 $responsive: true;
 $sizes: ("", "M", "L", "Xl");

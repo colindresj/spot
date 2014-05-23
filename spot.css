@@ -418,45 +418,6 @@ html {
 .table {
   border: 1px solid #444444; }
 
-/**
- * Modifier `table--*`
- *
- * A `table` modifier that sets the table width.
- *
- * 1. Width based modifiers (ex. table--oneThird) will determine the length of
- *    the table in percentages, and so are relative to the width of its parent.
- *    The `$table-widths` map specifies all the table width modifiers available.
- */
-.table--oneEigth {
-  width: 12.5%; }
-
-.table--oneFourth {
-  width: 25%; }
-
-.table--oneThird {
-  width: 33.33%; }
-
-.table--threeEigths {
-  width: 37.5%; }
-
-.table--oneHalf {
-  width: 50%; }
-
-.table--fiveEigths {
-  width: 62.5%; }
-
-.table--twoThirds {
-  width: 66.666%; }
-
-.table--threeQuarters {
-  width: 75%; }
-
-.table--sevenEigths {
-  width: 87.5%; }
-
-.table--full {
-  width: 100%; }
-
 .table--striped tbody tr:nth-of-type(odd) {
   background-color: #cccccc; }
 
@@ -473,43 +434,6 @@ html {
 
 .table--hoverRow tbody tr:hover {
   background: #cccccc; }
-
-/**
- * Base Element `table-col`
- *
- * A `table-col` element that consists of a single modifier and no unmodified
- * element. The modifier attribute sets proportional column widths and relies on
- * the `$table-widths` map from above.
- */
-.table-col--oneEigth {
-  width: 12.5%; }
-
-.table-col--oneFourth {
-  width: 25%; }
-
-.table-col--oneThird {
-  width: 33.33%; }
-
-.table-col--threeEigths {
-  width: 37.5%; }
-
-.table-col--oneHalf {
-  width: 50%; }
-
-.table-col--fiveEigths {
-  width: 62.5%; }
-
-.table-col--twoThirds {
-  width: 66.666%; }
-
-.table-col--threeQuarters {
-  width: 75%; }
-
-.table-col--sevenEigths {
-  width: 87.5%; }
-
-.table-col--full {
-  width: 100%; }
 
 /**
  * Base Component `code`
@@ -935,6 +859,44 @@ select[size] {
   width: 8.33333%; }
 
 /**
+ * Utility human widths
+ *
+ * Builds out an additional series of width utility components that are more in
+ * a more human readable format. The generated widths are all percentage based.
+ *
+ * 1. Will only be compiled if the option is set.
+ */
+.u-widthOneEigth {
+  width: 12.5%; }
+
+.u-widthOneFourth {
+  width: 25%; }
+
+.u-widthOneThird {
+  width: 33.33%; }
+
+.u-widthThreeEigths {
+  width: 37.5%; }
+
+.u-widthOneHalf {
+  width: 50%; }
+
+.u-widthFiveEigths {
+  width: 62.5%; }
+
+.u-widthTwoThirds {
+  width: 66.666%; }
+
+.u-widthThreeQuarters {
+  width: 75%; }
+
+.u-widthSevenEigths {
+  width: 87.5%; }
+
+.u-widthFull {
+  width: 100%; }
+
+/**
  * Utility `text`
  *
  * A text and font formatting and alignment utility that consists of a series of
@@ -1277,6 +1239,13 @@ th.is-shown {
 .u-marginLeft--large {
   margin-left: 30px; }
 
+/**
+ * State display
+ *
+ * Display states to toggle HTML elements between hidden, visible and invisible.
+ *
+ * 1. Credit to Twitter Bootstrap
+ */
 .is-invisible {
   visibility: hidden; }
 
@@ -1295,6 +1264,11 @@ th.is-shown {
   padding: 0;
   width: 1px; }
 
+/**
+ * State cursor
+ *
+ * Cursor states for when mousing over HTML elements.
+ */
 .is-clickable {
   cursor: pointer; }
 
@@ -1304,8 +1278,8 @@ th.is-shown {
 .is-draggable {
   cursor: move; }
 
-.is-primary {
-  background: #888888;
-  color: #444444; }
-  .is-primary a:hover {
-    color: #040404; }
+/**
+ * State context
+ *
+ * Context states to apply base contextual styles to components.
+ */
