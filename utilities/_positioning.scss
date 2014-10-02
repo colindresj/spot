@@ -1,5 +1,5 @@
 /**
- * Utility `pos`
+ * Utility `pos--<positioning>`
  *
  * A `pos` utility that consists of four modifiers and no unmodified utility
  * class. The loop builds the following classes: `--static`, `--relative`,
@@ -28,12 +28,12 @@
 }
 
 /**
- * Utility `verticalCenter`
+ * Utility `vertical-center`
  *
  * Vertically centers an HTML element inside its parent.
  */
 
-.u-verticalCenter {
+.u-vertical-center {
   @extend .u-pos--relative;
   top: 50%;
   transform: translateY(-50%);

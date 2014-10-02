@@ -1,5 +1,5 @@
 /**
- * Utility `disp`
+ * Utility `disp--<display type>`
  *
  * A `disp` utility that consists of a many modifiers and no unmodified
  * utility class.
@@ -13,7 +13,7 @@
   display: block;
 }
 
-.u-disp--inlineBlock {
+.u-disp--inline-block {
   display: inline-block;
 }
 
@@ -21,33 +21,33 @@
   display: table;
 }
 
-.u-disp--tableRow {
+.u-disp--table-row {
   display: table-row;
 }
 
-.u-disp--tableCell {
+.u-disp--table-cell {
   display: table-cell;
 }
 
-.u-blockCenter {
+.u-block-center {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 /**
- * Utility `replaceImage`
+ * Utility `replace-image`
  *
  * An image replacement utility. Useful for logos or other text-based graphics.
  *
- * <h1 class="u-replaceImage">
+ * <h1 class="u-replace-image">
  *   <a href="/">
  *     <img src="logo.png" alt="Logo Text" />
  *   </a>
  * </h1>
  */
 
-.u-replaceImage {
+.u-replace-image {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;

@@ -1,5 +1,5 @@
 /**
- * Utility widths
+ * Utility `width`
  *
  * Builds out a series of width utility components. These are most commonly used
  * when building a grid as an adjacent class of the `grid-col` elements. The
@@ -7,7 +7,7 @@
  *
  * 1. If responsive, will generate width components that are prefixed according
  *    to the `$sizes` list.
- * 2. Relies on the `create-cols` mixin, which itself relies on the `gridCalc`
+ * 2. Relies on the `create-cols` mixin, which itself relies on the `grid-calc`
  *    function.
  */
 
@@ -30,13 +30,13 @@
 
 @if $human-widths {
   $widths: (
-    OneEigth: 12.5%, OneFourth: 25%, OneThird: 33.33%, ThreeEigths: 37.5%,
-    OneHalf: 50%, FiveEigths: 62.5%, TwoThirds: 66.666%, ThreeQuarters: 75%,
-    SevenEigths: 87.5%, Full: 100%
+    one-eighth: 12.5%, one-fourth: 25%, one-third: 33.33%, three-eighths: 37.5%,
+    one-half: 50%, five-eighths: 62.5%, two-thirds: 66.666%, three-quarters: 75%,
+    seven-eighths: 87.5%, full: 100%
   );
 
   @each $class, $width in $widths {
-    .u-width#{$class} {
+    .u-width--#{$class} {
       width: $width;
     }
   }

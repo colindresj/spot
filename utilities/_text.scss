@@ -6,10 +6,10 @@
  */
 
 /**
- * Modifier `--[alignment]`
+ * Modifier `--<alignment>`
  *
  * Produces alignment modidifers for left, center and right text alignment. The
- * loop builds the following classes: `--left`, `--right`, and `--center`.
+ * loop builds the following classes: `--left`, `--right` and `--center`.
  */
 
 @each $alignment in (left, right, center) {
@@ -19,33 +19,36 @@
 }
 
 /**
- * Modifier `--[font weight]`
+ * Modifier `--<font weight>`
  *
  * Produces font weight modidifers for bold, semi-bold, light and ultra-light
  * font weights. The loops builds the following classes:
  *   `--bold`: 800 `font-weight`
- *   `--semiBold`: 600 `font-weight`
+ *   `--semi-bold`: 600 `font-weight`
+ *   `--normal`: 400 `font-weight`
  *   `--light`: 300 `font-weight`
- *   `--ultraLight`: 200 `font-weight`
+ *   `--ultra-light`: 200 `font-weight`
  */
 
-@each $class, $weight in (bold: 800, semiBold: 600, light: 300, ultraLight: 200) {
+@each $class, $weight in (
+    bold: 800, semi-bold: 600, normal: 400, light: 300, ultra-light: 200
+  ) {
   .u-text--#{$class} {
     font-weight: $weight;
   }
 }
 
 /**
- * Modifier `--[word wrap style]`
+ * Modifier `--<word wrap style>`
  *
  * Determine how to wrap text at the end of a line.
  */
 
-.u-text--breakWord {
+.u-text--break-word {
   word-wrap: break-word;
 }
 
-.u-text--noWrap {
+.u-text--no-wrap {
   white-space: nowrap;
 }
 

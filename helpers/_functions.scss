@@ -1,11 +1,11 @@
-@function toRem($pixels) {
+@function to-rem($pixels) {
   @if unitless($pixels) {
     $pixels: $pixels + "px";
   }
   @return ($pixels / 16px) * 1rem;
 }
 
-@function createInputsList($input-types) {
+@function create-input-list($input-types) {
   $inputs : ();
   @each $type in $input-types {
     $input: "input[type='#{$type}']";
@@ -14,6 +14,6 @@
   @return $inputs;
 }
 
-@function gridCalc($col, $num-cols) {
+@function grid-calc($col, $num-cols) {
   @return percentage($col / $num-cols)
 }

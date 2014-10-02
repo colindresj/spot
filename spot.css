@@ -365,7 +365,15 @@ html {
   min-height: 100%;
   overflow-y: scroll; }
 
-*, *:before, *:after {
+/**
+ * Base Component `*`
+ *
+ * Applies `border-box` box-sizing to all elements and pseudo elements for more
+ * predictable control over the box model.
+ */
+*,
+*:before,
+*:after {
   box-sizing: border-box; }
 
 /**
@@ -375,9 +383,9 @@ html {
  * best applied to table elements. By default it has a 1px border in
  * `$dark-gray`, collapsed borders and no border spacing.
  *
- * <table class="table table--bordered table--hoverRow">
+ * <table class="table table--bordered table--hover-row">
  *   <colgroup>
- *     <col class="table-col--oneEigth">
+ *     <col class="one-eighth">
  *     <col>
  *   </colgroup>
  *   <thead>
@@ -416,24 +424,24 @@ html {
   vertical-align: top; }
 
 .table {
-  border: 1px solid #444444; }
+  border: 1px solid #444; }
 
 .table--striped tbody tr:nth-of-type(odd) {
-  background-color: #cccccc; }
+  background-color: #ccc; }
 
 .table--bordered th,
 .table--bordered td {
-  border: 1px solid #444444; }
+  border: 1px solid #444; }
 
-.table--borderedHorizontal tr {
-  border-bottom: 1px solid #444444; }
+.table--bordered-horizontal tr {
+  border-bottom: 1px solid #444; }
 
-.table--borderedVertical th,
-.table--borderedVertical td {
-  border-right: 1px solid #444444; }
+.table--bordered-vertical th,
+.table--bordered-vertical td {
+  border-right: 1px solid #444; }
 
-.table--hoverRow tbody tr:hover {
-  background: #cccccc; }
+.table--hover-row tbody tr:hover {
+  background: #ccc; }
 
 /**
  * Base Component `code`
@@ -458,7 +466,7 @@ html {
   white-space: nowrap; }
 
 .code--highlighted {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   color: #434343; }
 
 .code--keyboard {
@@ -502,107 +510,158 @@ figure > img {
   border-radius: 50%; }
 
 /**
- * Base Component `heading[size]`
- * <h1>
+ * Base Component `<heading>`
+ * <h3 class="h6">
  *   The Title
- * </h1>
+ * </h3>
  *
- * A number of `heading` components that can be used to display information. A
+ * A number of heading components that can be used to display information. A
  * standard `h1`-`h6` element can be used predictably, however the individual
  * class may also be used for more flexibility as well. For example, you can
- * style a form legend with the `.headingTwo` to turn it into a `headingTwo`
+ * style a form legend with the `.h2` class to turn it into a level-two heading
  * component without relying on the `h2` element.
  */
 h1,
-.headingOne {
+.h1 {
   font-size: 36px;
   font-size: 2.25rem; }
 
 h2,
-.headingTwo {
+.h2 {
   font-size: 30px;
   font-size: 1.875rem; }
 
 h3,
-.headingThree {
+.h3 {
   font-size: 24px;
   font-size: 1.5rem; }
 
 h4,
-.headingFour {
+.h4 {
   font-size: 22px;
   font-size: 1.375rem; }
 
 h5,
-.headingFive {
+.h5 {
   font-size: 18px;
   font-size: 1.125rem; }
 
 h6,
-.headingSix {
+.h6 {
   font-size: 16px;
   font-size: 1rem; }
 
-h1, h2, h3, h4, h5, h6,
-.headingOne, .headingTwo,
-.headingThree, .headingFour,
-.headingFive, .headingSix {
+h1,
+.h1 {
+  font-weight: bold;
+  line-height: 1.4; }
+
+h2,
+.h2 {
+  font-weight: bold;
+  line-height: 1.4; }
+
+h3,
+.h3 {
+  font-weight: bold;
+  line-height: 1.4; }
+
+h4,
+.h4 {
+  font-weight: bold;
+  line-height: 1.4; }
+
+h5,
+.h5 {
+  font-weight: bold;
+  line-height: 1.4; }
+
+h6,
+.h6 {
   font-weight: bold;
   line-height: 1.4; }
 
 /**
- * Base Component `subheading[size]`
- * <small class="subheadingOne">
+ * Base Component `sub-<heading>`
+ * <small class="sub-h4">
  *   The Subtitle
  * </small>
  *
  * A subheading that can be used to add additional content below or beside a
  * heading. This component is best applied to heading elements when standing
- * alone, or `span` or `small` elements when combined with nested inside a
- * `heading` component.
+ * alone, or `span` or `small` elements when nested inside a heading component.
  */
-.subheadingOne, .subheadingOne--block {
+.sub-h1, .sub-h1--block {
   font-size: 22.5px;
   font-size: 1.40625rem; }
 
-.subheadingTwo, .subheadingTwo--block {
+.sub-h2, .sub-h2--block {
   font-size: 18.75px;
   font-size: 1.17188rem; }
 
-.subheadingThree, .subheadingThree--block {
+.sub-h3, .sub-h3--block {
   font-size: 15px;
   font-size: 0.9375rem; }
 
-.subheadingFour, .subheadingFour--block {
+.sub-h4, .sub-h4--block {
   font-size: 13.75px;
   font-size: 0.85938rem; }
 
-.subheadingFive, .subheadingFive--block {
+.sub-h5, .sub-h5--block {
   font-size: 11.25px;
   font-size: 0.70313rem; }
 
-.subheadingSix, .subheadingSix--block {
+.sub-h6, .sub-h6--block {
   font-size: 10px;
   font-size: 0.625rem; }
 
-.subheadingOne, .subheadingOne--block, .subheadingTwo, .subheadingTwo--block,
-.subheadingThree,
-.subheadingThree--block, .subheadingFour, .subheadingFour--block,
-.subheadingFive,
-.subheadingFive--block, .subheadingSix, .subheadingSix--block {
+.sub-h1, .sub-h1--block {
+  font-weight: normal;
+  line-height: 1.25; }
+
+.sub-h2, .sub-h2--block {
+  font-weight: normal;
+  line-height: 1.25; }
+
+.sub-h3, .sub-h3--block {
+  font-weight: normal;
+  line-height: 1.25; }
+
+.sub-h4, .sub-h4--block {
+  font-weight: normal;
+  line-height: 1.25; }
+
+.sub-h5, .sub-h5--block {
+  font-weight: normal;
+  line-height: 1.25; }
+
+.sub-h6, .sub-h6--block {
   font-weight: normal;
   line-height: 1.25; }
 
 /**
- * Modifier `subheading[size]--block`
+ * Modifier `sub-<heading>--block`
  *
- * A `subheading[size]` modifier sets the display type for the subheading. The
+ * A `sub-<heading>` modifier sets the display type for the subheading. The
  * subheading may be used inside a naturally inline element, such as a `span`,
- * so this modifier lends `block` display to those types of elements.
+ * and this modifier lends `block` display to those types of elements.
  */
-.subheadingOne--block, .subheadingTwo--block,
-.subheadingThree--block, .subheadingFour--block,
-.subheadingFive--block, .subheadingSix--block {
+.sub-h1--block {
+  display: block; }
+
+.sub-h2--block {
+  display: block; }
+
+.sub-h3--block {
+  display: block; }
+
+.sub-h4--block {
+  display: block; }
+
+.sub-h5--block {
+  display: block; }
+
+.sub-h6--block {
   display: block; }
 
 /**
@@ -811,7 +870,7 @@ select[size] {
   padding: 0; }
 
 /**
- * Utility widths
+ * Utility `width`
  *
  * Builds out a series of width utility components. These are most commonly used
  * when building a grid as an adjacent class of the `grid-col` elements. The
@@ -819,43 +878,43 @@ select[size] {
  *
  * 1. If responsive, will generate width components that are prefixed according
  *    to the `$sizes` list.
- * 2. Relies on the `create-cols` mixin, which itself relies on the `gridCalc`
+ * 2. Relies on the `create-cols` mixin, which itself relies on the `grid-calc`
  *    function.
  */
-.u-width12of12, .u-width6of6, .u-width3of3, .u-width12of12M, .u-width6of6M, .u-width3of3M, .u-width12of12L, .u-width6of6L, .u-width3of3L, .u-width12of12Xl, .u-width6of6Xl, .u-width3of3Xl {
+.u-width--12of12, .u-width--6of6, .u-width--3of3, .u-width--12of12M, .u-width--6of6M, .u-width--3of3M, .u-width--12of12L, .u-width--6of6L, .u-width--3of3L, .u-width--12of12Xl, .u-width--6of6Xl, .u-width--3of3Xl {
   width: 100%; }
 
-.u-width11of12, .u-width11of12M, .u-width11of12L, .u-width11of12Xl {
+.u-width--11of12, .u-width--11of12M, .u-width--11of12L, .u-width--11of12Xl {
   width: 91.66667%; }
 
-.u-width10of12, .u-width5of6, .u-width10of12M, .u-width5of6M, .u-width10of12L, .u-width5of6L, .u-width10of12Xl, .u-width5of6Xl {
+.u-width--10of12, .u-width--5of6, .u-width--10of12M, .u-width--5of6M, .u-width--10of12L, .u-width--5of6L, .u-width--10of12Xl, .u-width--5of6Xl {
   width: 83.33333%; }
 
-.u-width9of12, .u-width9of12M, .u-width9of12L, .u-width9of12Xl {
+.u-width--9of12, .u-width--9of12M, .u-width--9of12L, .u-width--9of12Xl {
   width: 75%; }
 
-.u-width8of12, .u-width4of6, .u-width2of3, .u-width8of12M, .u-width4of6M, .u-width2of3M, .u-width8of12L, .u-width4of6L, .u-width2of3L, .u-width8of12Xl, .u-width4of6Xl, .u-width2of3Xl {
+.u-width--8of12, .u-width--4of6, .u-width--2of3, .u-width--8of12M, .u-width--4of6M, .u-width--2of3M, .u-width--8of12L, .u-width--4of6L, .u-width--2of3L, .u-width--8of12Xl, .u-width--4of6Xl, .u-width--2of3Xl {
   width: 66.66667%; }
 
-.u-width7of12, .u-width7of12M, .u-width7of12L, .u-width7of12Xl {
+.u-width--7of12, .u-width--7of12M, .u-width--7of12L, .u-width--7of12Xl {
   width: 58.33333%; }
 
-.u-width6of12, .u-width3of6, .u-width6of12M, .u-width3of6M, .u-width6of12L, .u-width3of6L, .u-width6of12Xl, .u-width3of6Xl {
+.u-width--6of12, .u-width--3of6, .u-width--6of12M, .u-width--3of6M, .u-width--6of12L, .u-width--3of6L, .u-width--6of12Xl, .u-width--3of6Xl {
   width: 50%; }
 
-.u-width5of12, .u-width5of12M, .u-width5of12L, .u-width5of12Xl {
+.u-width--5of12, .u-width--5of12M, .u-width--5of12L, .u-width--5of12Xl {
   width: 41.66667%; }
 
-.u-width4of12, .u-width2of6, .u-width1of3, .u-width4of12M, .u-width2of6M, .u-width1of3M, .u-width4of12L, .u-width2of6L, .u-width1of3L, .u-width4of12Xl, .u-width2of6Xl, .u-width1of3Xl {
+.u-width--4of12, .u-width--2of6, .u-width--1of3, .u-width--4of12M, .u-width--2of6M, .u-width--1of3M, .u-width--4of12L, .u-width--2of6L, .u-width--1of3L, .u-width--4of12Xl, .u-width--2of6Xl, .u-width--1of3Xl {
   width: 33.33333%; }
 
-.u-width3of12, .u-width3of12M, .u-width3of12L, .u-width3of12Xl {
+.u-width--3of12, .u-width--3of12M, .u-width--3of12L, .u-width--3of12Xl {
   width: 25%; }
 
-.u-width2of12, .u-width1of6, .u-width2of12M, .u-width1of6M, .u-width2of12L, .u-width1of6L, .u-width2of12Xl, .u-width1of6Xl {
+.u-width--2of12, .u-width--1of6, .u-width--2of12M, .u-width--1of6M, .u-width--2of12L, .u-width--1of6L, .u-width--2of12Xl, .u-width--1of6Xl {
   width: 16.66667%; }
 
-.u-width1of12, .u-width1of12M, .u-width1of12L, .u-width1of12Xl {
+.u-width--1of12, .u-width--1of12M, .u-width--1of12L, .u-width--1of12Xl {
   width: 8.33333%; }
 
 /**
@@ -866,34 +925,34 @@ select[size] {
  *
  * 1. Will only be compiled if the option is set.
  */
-.u-widthOneEigth {
+.u-width--one-eighth {
   width: 12.5%; }
 
-.u-widthOneFourth {
+.u-width--one-fourth {
   width: 25%; }
 
-.u-widthOneThird {
+.u-width--one-third {
   width: 33.33%; }
 
-.u-widthThreeEigths {
+.u-width--three-eighths {
   width: 37.5%; }
 
-.u-widthOneHalf {
+.u-width--one-half {
   width: 50%; }
 
-.u-widthFiveEigths {
+.u-width--five-eighths {
   width: 62.5%; }
 
-.u-widthTwoThirds {
+.u-width--two-thirds {
   width: 66.666%; }
 
-.u-widthThreeQuarters {
+.u-width--three-quarters {
   width: 75%; }
 
-.u-widthSevenEigths {
+.u-width--seven-eighths {
   width: 87.5%; }
 
-.u-widthFull {
+.u-width--full {
   width: 100%; }
 
 /**
@@ -903,10 +962,10 @@ select[size] {
  * alignment, weight and wordrapping modifiers and no un-modified class.
  */
 /**
- * Modifier `--[alignment]`
+ * Modifier `--<alignment>`
  *
  * Produces alignment modidifers for left, center and right text alignment. The
- * loop builds the following classes: `--left`, `--right`, and `--center`.
+ * loop builds the following classes: `--left`, `--right` and `--center`.
  */
 .u-text--left {
   text-align: left; }
@@ -918,36 +977,40 @@ select[size] {
   text-align: center; }
 
 /**
- * Modifier `--[font weight]`
+ * Modifier `--<font weight>`
  *
  * Produces font weight modidifers for bold, semi-bold, light and ultra-light
  * font weights. The loops builds the following classes:
  *   `--bold`: 800 `font-weight`
- *   `--semiBold`: 600 `font-weight`
+ *   `--semi-bold`: 600 `font-weight`
+ *   `--normal`: 400 `font-weight`
  *   `--light`: 300 `font-weight`
- *   `--ultraLight`: 200 `font-weight`
+ *   `--ultra-light`: 200 `font-weight`
  */
 .u-text--bold {
   font-weight: 800; }
 
-.u-text--semiBold {
+.u-text--semi-bold {
   font-weight: 600; }
+
+.u-text--normal {
+  font-weight: 400; }
 
 .u-text--light {
   font-weight: 300; }
 
-.u-text--ultraLight {
+.u-text--ultra-light {
   font-weight: 200; }
 
 /**
- * Modifier `--[word wrap style]`
+ * Modifier `--<word wrap style>`
  *
  * Determine how to wrap text at the end of a line.
  */
-.u-text--breakWord {
+.u-text--break-word {
   word-wrap: break-word; }
 
-.u-text--noWrap, .u-text--truncate {
+.u-text--no-wrap, .u-text--truncate {
   white-space: nowrap; }
 
 /**
@@ -966,7 +1029,7 @@ select[size] {
   word-wrap: normal; }
 
 /**
- * Utility `pos`
+ * Utility `pos--<positioning>`
  *
  * A `pos` utility that consists of four modifiers and no unmodified utility
  * class. The loop builds the following classes: `--static`, `--relative`,
@@ -975,10 +1038,10 @@ select[size] {
 .u-pos--static {
   position: static; }
 
-.u-pos--relative, .u-verticalCenter {
+.u-pos--relative, .u-vertical-center {
   position: relative; }
 
-.u-pos--absolute, .u-full, .is-forScreenReaders {
+.u-pos--absolute, .u-full, .is-for-screen-readers {
   position: absolute; }
 
 .u-pos--fixed {
@@ -997,18 +1060,18 @@ select[size] {
   top: 0; }
 
 /**
- * Utility `verticalCenter`
+ * Utility `vertical-center`
  *
  * Vertically centers an HTML element inside its parent.
  */
-.u-verticalCenter {
+.u-vertical-center {
   top: 50%;
   transform: translateY(-50%); }
 
 /**
- * Utility `float`
+ * Utility `float--<position>`
  *
- * A `float` utility that consists of a two modifiers and no unmodified
+ * A `float` utility that consists of a three modifiers and no unmodified
  * utility class.
  */
 .u-float--left {
@@ -1017,11 +1080,14 @@ select[size] {
 .u-float--right {
   float: right; }
 
+.u-float--none {
+  float: none; }
+
 /**
  * Utility `cf`
  *
  * The clearfix utility, which is used to contain floated child HTML elements.
- * This clearfix uses pseudo elements is based of the micro clearfix.
+ * This clearfix uses pseudo elements and is based of the micro clearfix.
  */
 .u-cf::before, .u-cf::after {
   content: ' ';
@@ -1030,7 +1096,7 @@ select[size] {
   clear: both; }
 
 /**
- * Utility `disp`
+ * Utility `disp--<display type>`
  *
  * A `disp` utility that consists of a many modifiers and no unmodified
  * utility class.
@@ -1041,202 +1107,202 @@ select[size] {
 .u-disp--block, .u-text--truncate, .is-shown {
   display: block; }
 
-.u-disp--inlineBlock {
+.u-disp--inline-block {
   display: inline-block; }
 
 .u-disp--table, table.is-shown {
   display: table; }
 
-.u-disp--tableRow, tr.is-shown {
+.u-disp--table-row, tr.is-shown {
   display: table-row; }
 
-.u-disp--tableCell, td.is-shown,
+.u-disp--table-cell, td.is-shown,
 th.is-shown {
   display: table-cell; }
 
-.u-blockCenter, .is-centered {
+.u-block-center, .is-centered {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
 /**
- * Utility `replaceImage`
+ * Utility `replace-image`
  *
  * An image replacement utility. Useful for logos or other text-based graphics.
  *
- * <h1 class="u-replaceImage">
+ * <h1 class="u-replace-image">
  *   <a href="/">
  *     <img src="logo.png" alt="Logo Text" />
  *   </a>
  * </h1>
  */
-.u-replaceImage {
+.u-replace-image {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap; }
 
 /**
- * Utility `padding[direction]`
+ * Utility `padding--<direction>[--size]`
  *
  * A series of spacing utilities for consistent padding in any direction and
  * with no un-modified class.
  *
  * 1. For convenience, class names are aliased to an abbreviated form that uses
- *    'p' plus the first letter of the direction. For example, `.u-paddingTop`
+ *    'p' plus the first letter of the direction. For example, `.u-padding-top`
  *    can be aliased to `.u-pt`.
  */
 .u-pt--small, .u-pv--small,
-.u-paddingVertical--small, .u-pa--small,
-.u-paddingAll--small,
-.u-paddingTop--small {
+.u-padding-vertical--small, .u-pa--small,
+.u-padding-all--small,
+.u-padding-top--small {
   padding-top: 10px; }
 
 .u-pr--small, .u-ph--small,
-.u-paddingHorizontal--small, .u-pa--small,
-.u-paddingAll--small,
-.u-paddingRight--small {
+.u-padding-horizontal--small, .u-pa--small,
+.u-padding-all--small,
+.u-padding-right--small {
   padding-right: 10px; }
 
 .u-pb--small, .u-pv--small,
-.u-paddingVertical--small, .u-pa--small,
-.u-paddingAll--small,
-.u-paddingBottom--small {
+.u-padding-vertical--small, .u-pa--small,
+.u-padding-all--small,
+.u-padding-bottom--small {
   padding-bottom: 10px; }
 
 .u-pl--small, .u-ph--small,
-.u-paddingHorizontal--small, .u-pa--small,
-.u-paddingAll--small,
-.u-paddingLeft--small {
+.u-padding-horizontal--small, .u-pa--small,
+.u-padding-all--small,
+.u-padding-left--small {
   padding-left: 10px; }
 
 .u-pt--medium, .u-pv--medium,
-.u-paddingVertical--medium, .u-pa--medium,
-.u-paddingAll--medium,
-.u-paddingTop--medium {
+.u-padding-vertical--medium, .u-pa--medium,
+.u-padding-all--medium,
+.u-padding-top--medium {
   padding-top: 20px; }
 
 .u-pr--medium, .u-ph--medium,
-.u-paddingHorizontal--medium, .u-pa--medium,
-.u-paddingAll--medium,
-.u-paddingRight--medium {
+.u-padding-horizontal--medium, .u-pa--medium,
+.u-padding-all--medium,
+.u-padding-right--medium {
   padding-right: 20px; }
 
 .u-pb--medium, .u-pv--medium,
-.u-paddingVertical--medium, .u-pa--medium,
-.u-paddingAll--medium,
-.u-paddingBottom--medium {
+.u-padding-vertical--medium, .u-pa--medium,
+.u-padding-all--medium,
+.u-padding-bottom--medium {
   padding-bottom: 20px; }
 
 .u-pl--medium, .u-ph--medium,
-.u-paddingHorizontal--medium, .u-pa--medium,
-.u-paddingAll--medium,
-.u-paddingLeft--medium {
+.u-padding-horizontal--medium, .u-pa--medium,
+.u-padding-all--medium,
+.u-padding-left--medium {
   padding-left: 20px; }
 
 .u-pt--large, .u-pv--large,
-.u-paddingVertical--large, .u-pa--large,
-.u-paddingAll--large,
-.u-paddingTop--large {
+.u-padding-vertical--large, .u-pa--large,
+.u-padding-all--large,
+.u-padding-top--large {
   padding-top: 30px; }
 
 .u-pr--large, .u-ph--large,
-.u-paddingHorizontal--large, .u-pa--large,
-.u-paddingAll--large,
-.u-paddingRight--large {
+.u-padding-horizontal--large, .u-pa--large,
+.u-padding-all--large,
+.u-padding-right--large {
   padding-right: 30px; }
 
 .u-pb--large, .u-pv--large,
-.u-paddingVertical--large, .u-pa--large,
-.u-paddingAll--large,
-.u-paddingBottom--large {
+.u-padding-vertical--large, .u-pa--large,
+.u-padding-all--large,
+.u-padding-bottom--large {
   padding-bottom: 30px; }
 
 .u-pl--large, .u-ph--large,
-.u-paddingHorizontal--large, .u-pa--large,
-.u-paddingAll--large,
-.u-paddingLeft--large {
+.u-padding-horizontal--large, .u-pa--large,
+.u-padding-all--large,
+.u-padding-left--large {
   padding-left: 30px; }
 
 /**
- * Utility `margin[direction]`
+ * Utility `margin--<direction>[--size]`
  *
  * A series of spacing utilities for consistent margin in any direction and
  * with no un-modified class.
  *
  * 1. For convenience, class names are aliased to an abbreviated form that uses
- *    'm' mlus the first letter of the direction. For exammle, `.u-marginTop`
+ *    'm' mlus the first letter of the direction. For exammle, `.u-margin-top`
  *    can be aliased to `.u-mt`.
  */
 .u-mt--small, .u-mv--small,
-.u-marginVertical--small, .u-ma--small,
-.u-marginAll--small,
-.u-marginTop--small {
+.u-margin-vertical--small, .u-ma--small,
+.u-margin-all--small,
+.u-margin-top--small {
   margin-top: 10px; }
 
 .u-mr--small, .u-mh--small,
-.u-marginHorizontal--small, .u-ma--small,
-.u-marginAll--small,
-.u-marginRight--small {
+.u-margin-horizontal--small, .u-ma--small,
+.u-margin-all--small,
+.u-margin-right--small {
   margin-right: 10px; }
 
 .u-mb--small, .u-mv--small,
-.u-marginVertical--small, .u-ma--small,
-.u-marginAll--small,
-.u-marginBottom--small {
+.u-margin-vertical--small, .u-ma--small,
+.u-margin-all--small,
+.u-margin-bottom--small {
   margin-bottom: 10px; }
 
 .u-ml--small, .u-mh--small,
-.u-marginHorizontal--small, .u-ma--small,
-.u-marginAll--small,
-.u-marginLeft--small {
+.u-margin-horizontal--small, .u-ma--small,
+.u-margin-all--small,
+.u-margin-left--small {
   margin-left: 10px; }
 
 .u-mt--medium, .u-mv--medium,
-.u-marginVertical--medium, .u-ma--medium,
-.u-marginAll--medium,
-.u-marginTop--medium {
+.u-margin-vertical--medium, .u-ma--medium,
+.u-margin-all--medium,
+.u-margin-top--medium {
   margin-top: 20px; }
 
 .u-mr--medium, .u-mh--medium,
-.u-marginHorizontal--medium, .u-ma--medium,
-.u-marginAll--medium,
-.u-marginRight--medium {
+.u-margin-horizontal--medium, .u-ma--medium,
+.u-margin-all--medium,
+.u-margin-right--medium {
   margin-right: 20px; }
 
 .u-mb--medium, .u-mv--medium,
-.u-marginVertical--medium, .u-ma--medium,
-.u-marginAll--medium,
-.u-marginBottom--medium {
+.u-margin-vertical--medium, .u-ma--medium,
+.u-margin-all--medium,
+.u-margin-bottom--medium {
   margin-bottom: 20px; }
 
 .u-ml--medium, .u-mh--medium,
-.u-marginHorizontal--medium, .u-ma--medium,
-.u-marginAll--medium,
-.u-marginLeft--medium {
+.u-margin-horizontal--medium, .u-ma--medium,
+.u-margin-all--medium,
+.u-margin-left--medium {
   margin-left: 20px; }
 
 .u-mt--large, .u-mv--large,
-.u-marginVertical--large, .u-ma--large,
-.u-marginAll--large,
-.u-marginTop--large {
+.u-margin-vertical--large, .u-ma--large,
+.u-margin-all--large,
+.u-margin-top--large {
   margin-top: 30px; }
 
 .u-mr--large, .u-mh--large,
-.u-marginHorizontal--large, .u-ma--large,
-.u-marginAll--large,
-.u-marginRight--large {
+.u-margin-horizontal--large, .u-ma--large,
+.u-margin-all--large,
+.u-margin-right--large {
   margin-right: 30px; }
 
 .u-mb--large, .u-mv--large,
-.u-marginVertical--large, .u-ma--large,
-.u-marginAll--large,
-.u-marginBottom--large {
+.u-margin-vertical--large, .u-ma--large,
+.u-margin-all--large,
+.u-margin-bottom--large {
   margin-bottom: 30px; }
 
 .u-ml--large, .u-mh--large,
-.u-marginHorizontal--large, .u-ma--large,
-.u-marginAll--large,
-.u-marginLeft--large {
+.u-margin-horizontal--large, .u-ma--large,
+.u-margin-all--large,
+.u-margin-left--large {
   margin-left: 30px; }
 
 /**
@@ -1256,7 +1322,7 @@ th.is-shown {
 .is-hidden {
   display: none; }
 
-.is-forScreenReaders {
+.is-for-screen-readers {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -1272,7 +1338,7 @@ th.is-shown {
 .is-clickable {
   cursor: pointer; }
 
-.is-notClickable {
+.is-not-clickable {
   cursor: default; }
 
 .is-draggable {

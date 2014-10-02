@@ -30,16 +30,16 @@ table.is-shown {
 
 tr.is-shown {
   @extend .is-visible;
-  @extend .u-disp--tableRow;
+  @extend .u-disp--table-row;
 }
 
 td.is-shown,
 th.is-shown {
   @extend .is-visible;
-  @extend .u-disp--tableCell;
+  @extend .u-disp--table-cell;
 }
 
-.is-forScreenReaders { // 1
+.is-for-screen-readers { // 1
   @extend .u-pos--absolute;
   border: 0;
   clip: rect(0,0,0,0);
@@ -50,5 +50,5 @@ th.is-shown {
 }
 
 .is-centered {
-  @extend .u-blockCenter;
+  @extend .u-block-center;
 }

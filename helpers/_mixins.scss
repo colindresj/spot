@@ -1,6 +1,6 @@
 @mixin to-rem($property, $pixels) {
   #{$property}: $pixels;
-  #{$property}: toRem($pixels);
+  #{$property}: to-rem($pixels);
 }
 
 @mixin font-size($font-size) {
@@ -16,12 +16,12 @@
       $j: $total / $i;
       @while $j > 0 {
         @if $i == 1 and $size == "" {
-          .u-width#{$j}of#{$total}#{$size} {
-            width: gridCalc($j, $total);
+          .u-width--#{$j}of#{$total}#{$size} {
+            width: grid-calc($j, $total);
           }
         } @else {
-          .u-width#{$j}of#{$total / $i}#{$size} {
-            @extend .u-width#{$j * $i}of#{$total};
+          .u-width--#{$j}of#{$total / $i}#{$size} {
+            @extend .u-width--#{$j * $i}of#{$total};
           }
         }
         $j: $j - 1;
@@ -31,7 +31,7 @@
 }
 
 @mixin truncate-text($width: 100%) {
-  @extend .u-text--noWrap;
+  @extend .u-text--no-wrap;
   @extend .u-disp--block;
   max-width: 100%;
   overflow: hidden;

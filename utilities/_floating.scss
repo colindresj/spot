@@ -1,7 +1,7 @@
 /**
- * Utility `float`
+ * Utility `float--<position>`
  *
- * A `float` utility that consists of a two modifiers and no unmodified
+ * A `float` utility that consists of a three modifiers and no unmodified
  * utility class.
  */
 
@@ -13,11 +13,15 @@
   float: right;
 }
 
+.u-float--none {
+  float: none;
+}
+
 /**
  * Utility `cf`
  *
  * The clearfix utility, which is used to contain floated child HTML elements.
- * This clearfix uses pseudo elements is based of the micro clearfix.
+ * This clearfix uses pseudo elements and is based of the micro clearfix.
  */
 
 .u-cf {

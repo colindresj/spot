@@ -1,48 +1,48 @@
 /**
- * Utility `margin[direction]`
+ * Utility `margin--<direction>[--size]`
  *
  * A series of spacing utilities for consistent margin in any direction and
  * with no un-modified class.
  *
  * 1. For convenience, class names are aliased to an abbreviated form that uses
- *    'm' mlus the first letter of the direction. For exammle, `.u-marginTop`
+ *    'm' mlus the first letter of the direction. For exammle, `.u-margin-top`
  *    can be aliased to `.u-mt`.
  */
 
 .u-mt--small, // 1
-.u-marginTop--small {
+.u-margin-top--small {
   margin-top: $small-space;
 }
 
 .u-mr--small, // 1
-.u-marginRight--small {
+.u-margin-right--small {
   margin-right: $small-space;
 }
 
 .u-mb--small, // 1
-.u-marginBottom--small {
+.u-margin-bottom--small {
   margin-bottom: $small-space;
 }
 
 .u-ml--small, // 1
-.u-marginLeft--small {
+.u-margin-left--small {
   margin-left: $small-space;
 }
 
 .u-mv--small, // 1
-.u-marginVertical--small {
+.u-margin-vertical--small {
   @extend .u-mt--small;
   @extend .u-mb--small;
 }
 
 .u-mh--small, // 1
-.u-marginHorizontal--small {
+.u-margin-horizontal--small {
   @extend .u-mr--small;
   @extend .u-ml--small;
 }
 
 .u-ma--small, // 1
-.u-marginAll--small {
+.u-margin-all--small {
   @extend .u-mt--small;
   @extend .u-mr--small;
   @extend .u-mb--small;
@@ -50,39 +50,39 @@
 }
 
 .u-mt--medium, // 1
-.u-marginTop--medium {
+.u-margin-top--medium {
   margin-top: $medium-space;
 }
 
 .u-mr--medium, // 1
-.u-marginRight--medium {
+.u-margin-right--medium {
   margin-right: $medium-space;
 }
 
 .u-mb--medium, // 1
-.u-marginBottom--medium {
+.u-margin-bottom--medium {
   margin-bottom: $medium-space;
 }
 
 .u-ml--medium, // 1
-.u-marginLeft--medium {
+.u-margin-left--medium {
   margin-left: $medium-space;
 }
 
 .u-mv--medium, // 1
-.u-marginVertical--medium {
+.u-margin-vertical--medium {
   @extend .u-mt--medium;
   @extend .u-mb--medium;
 }
 
 .u-mh--medium, // 1
-.u-marginHorizontal--medium {
+.u-margin-horizontal--medium {
   @extend .u-mr--medium;
   @extend .u-ml--medium;
 }
 
 .u-ma--medium, // 1
-.u-marginAll--medium {
+.u-margin-all--medium {
   @extend .u-mt--medium;
   @extend .u-mr--medium;
   @extend .u-mb--medium;
@@ -90,39 +90,39 @@
 }
 
 .u-mt--large, // 1
-.u-marginTop--large {
+.u-margin-top--large {
   margin-top: $large-space;
 }
 
 .u-mr--large, // 1
-.u-marginRight--large {
+.u-margin-right--large {
   margin-right: $large-space;
 }
 
 .u-mb--large, // 1
-.u-marginBottom--large {
+.u-margin-bottom--large {
   margin-bottom: $large-space;
 }
 
 .u-ml--large, // 1
-.u-marginLeft--large {
+.u-margin-left--large {
   margin-left: $large-space;
 }
 
 .u-mv--large, // 1
-.u-marginVertical--large {
+.u-margin-vertical--large {
   @extend .u-mt--large;
   @extend .u-mb--large;
 }
 
 .u-mh--large, // 1
-.u-marginHorizontal--large {
+.u-margin-horizontal--large {
   @extend .u-mr--large;
   @extend .u-ml--large;
 }
 
 .u-ma--large, // 1
-.u-marginAll--large {
+.u-margin-all--large {
   @extend .u-mt--large;
   @extend .u-mr--large;
   @extend .u-mb--large;

@@ -1,48 +1,48 @@
 /**
- * Utility `padding[direction]`
+ * Utility `padding--<direction>[--size]`
  *
  * A series of spacing utilities for consistent padding in any direction and
  * with no un-modified class.
  *
  * 1. For convenience, class names are aliased to an abbreviated form that uses
- *    'p' plus the first letter of the direction. For example, `.u-paddingTop`
+ *    'p' plus the first letter of the direction. For example, `.u-padding-top`
  *    can be aliased to `.u-pt`.
  */
 
 .u-pt--small, // 1
-.u-paddingTop--small {
+.u-padding-top--small {
   padding-top: $small-space;
 }
 
 .u-pr--small, // 1
-.u-paddingRight--small {
+.u-padding-right--small {
   padding-right: $small-space;
 }
 
 .u-pb--small, // 1
-.u-paddingBottom--small {
+.u-padding-bottom--small {
   padding-bottom: $small-space;
 }
 
 .u-pl--small, // 1
-.u-paddingLeft--small {
+.u-padding-left--small {
   padding-left: $small-space;
 }
 
 .u-pv--small, // 1
-.u-paddingVertical--small {
+.u-padding-vertical--small {
   @extend .u-pt--small;
   @extend .u-pb--small;
 }
 
 .u-ph--small, // 1
-.u-paddingHorizontal--small {
+.u-padding-horizontal--small {
   @extend .u-pr--small;
   @extend .u-pl--small;
 }
 
 .u-pa--small, // 1
-.u-paddingAll--small {
+.u-padding-all--small {
   @extend .u-pt--small;
   @extend .u-pr--small;
   @extend .u-pb--small;
@@ -50,39 +50,39 @@
 }
 
 .u-pt--medium, // 1
-.u-paddingTop--medium {
+.u-padding-top--medium {
   padding-top: $medium-space;
 }
 
 .u-pr--medium, // 1
-.u-paddingRight--medium {
+.u-padding-right--medium {
   padding-right: $medium-space;
 }
 
 .u-pb--medium, // 1
-.u-paddingBottom--medium {
+.u-padding-bottom--medium {
   padding-bottom: $medium-space;
 }
 
 .u-pl--medium, // 1
-.u-paddingLeft--medium {
+.u-padding-left--medium {
   padding-left: $medium-space;
 }
 
 .u-pv--medium, // 1
-.u-paddingVertical--medium {
+.u-padding-vertical--medium {
   @extend .u-pt--medium;
   @extend .u-pb--medium;
 }
 
 .u-ph--medium, // 1
-.u-paddingHorizontal--medium {
+.u-padding-horizontal--medium {
   @extend .u-pr--medium;
   @extend .u-pl--medium;
 }
 
 .u-pa--medium, // 1
-.u-paddingAll--medium {
+.u-padding-all--medium {
   @extend .u-pt--medium;
   @extend .u-pr--medium;
   @extend .u-pb--medium;
@@ -90,39 +90,39 @@
 }
 
 .u-pt--large, // 1
-.u-paddingTop--large {
+.u-padding-top--large {
   padding-top: $large-space;
 }
 
 .u-pr--large, // 1
-.u-paddingRight--large {
+.u-padding-right--large {
   padding-right: $large-space;
 }
 
 .u-pb--large, // 1
-.u-paddingBottom--large {
+.u-padding-bottom--large {
   padding-bottom: $large-space;
 }
 
 .u-pl--large, // 1
-.u-paddingLeft--large {
+.u-padding-left--large {
   padding-left: $large-space;
 }
 
 .u-pv--large, // 1
-.u-paddingVertical--large {
+.u-padding-vertical--large {
   @extend .u-pt--large;
   @extend .u-pb--large;
 }
 
 .u-ph--large, // 1
-.u-paddingHorizontal--large {
+.u-padding-horizontal--large {
   @extend .u-pr--large;
   @extend .u-pl--large;
 }
 
 .u-pa--large, // 1
-.u-paddingAll--large {
+.u-padding-all--large {
   @extend .u-pt--large;
   @extend .u-pr--large;
   @extend .u-pb--large;

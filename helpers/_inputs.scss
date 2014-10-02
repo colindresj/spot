@@ -43,8 +43,8 @@ $all-input-types: join(
                     $button-input-types
                   );
 
-$html5-inputs: createInputsList($html5-input-types);
-$html4-inputs: createInputsList($html4-input-types);
-$text-inputs: createInputsList($text-input-types);
-$button-inputs: createInputsList($button-input-types);
-$all-inputs: createInputsList($all-input-types);
+$html5-inputs: create-input-list($html5-input-types);
+$html4-inputs: create-input-list($html4-input-types);
+$text-inputs: create-input-list($text-input-types);
+$button-inputs: create-input-list($button-input-types);
+$all-inputs: create-input-list($all-input-types);
