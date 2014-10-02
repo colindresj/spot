@@ -5,9 +5,9 @@
  * best applied to table elements. By default it has a 1px border in
  * `$dark-gray`, collapsed borders and no border spacing.
  *
- * <table class="table table--bordered table--hoverRow">
+ * <table class="table table--bordered table--hover-row">
  *   <colgroup>
- *     <col class="table-col--oneEigth">
+ *     <col class="one-eighth">
  *     <col>
  *   </colgroup>
  *   <thead>
@@ -64,20 +64,20 @@
   }
 }
 
-.table--borderedHorizontal {
+.table--bordered-horizontal {
   tr {
     border-bottom: 1px solid $dark-gray;
   }
 }
 
-.table--borderedVertical {
+.table--bordered-vertical {
   th,
   td {
     border-right: 1px solid $dark-gray;
   }
 }
 
-.table--hoverRow {
+.table--hover-row {
   tbody tr:hover {
     background: $light-gray;
   }
