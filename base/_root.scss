@@ -11,6 +11,15 @@ html {
   overflow-y: scroll;
 }
 
-*, *:before, *:after {
+/**
+ * Base Component `*`
+ *
+ * Applies `border-box` box-sizing to all elements and pseudo elements for more
+ * predictable control over the box model.
+ */
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
  }
