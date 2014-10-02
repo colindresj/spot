@@ -1,128 +1,134 @@
 /**
- * Base Component `heading[size]`
- * <h1>
+ * Base Component `<heading>`
+ * <h3 class="h6">
  *   The Title
- * </h1>
+ * </h3>
  *
- * A number of `heading` components that can be used to display information. A
+ * A number of heading components that can be used to display information. A
  * standard `h1`-`h6` element can be used predictably, however the individual
  * class may also be used for more flexibility as well. For example, you can
- * style a form legend with the `.headingTwo` to turn it into a `headingTwo`
+ * style a form legend with the `.h2` class to turn it into a level-two heading
  * component without relying on the `h2` element.
  */
 
 h1,
-.headingOne {
+.h1 {
   @include font-size($heading-one-size);
 }
 
 h2,
-.headingTwo {
+.h2 {
   @include font-size($heading-two-size);
 }
 
 h3,
-.headingThree {
+.h3 {
   @include font-size($heading-three-size);
 }
 
 h4,
-.headingFour {
+.h4 {
   @include font-size($heading-four-size);
 }
 
 h5,
-.headingFive {
+.h5 {
   @include font-size($heading-five-size);
 }
 
 h6,
-.headingSix {
+.h6 {
   @include font-size($heading-six-size);
 }
 
-h1, h2, h3, h4, h5, h6,
-.headingOne, .headingTwo,
-.headingThree, .headingFour,
-.headingFive, .headingSix {
-  font-weight: bold;
-  line-height: 1.4;
+$headings: h1, h2, h3, h4, h5, h6;
+
+@each $heading in $headings {
+  #{$heading},
+  .#{$heading} {
+    font-weight: bold;
+    line-height: 1.4;
+  }
 }
 
 /**
- * Base Component `subheading[size]`
- * <small class="subheadingOne">
+ * Base Component `sub-<heading>`
+ * <small class="sub-h4">
  *   The Subtitle
  * </small>
  *
  * A subheading that can be used to add additional content below or beside a
  * heading. This component is best applied to heading elements when standing
- * alone, or `span` or `small` elements when combined with nested inside a
- * `heading` component.
+ * alone, or `span` or `small` elements when nested inside a heading component.
  */
 
-.subheadingOne {
+.sub-h1 {
   @include font-size($heading-one-size * 5/8);
 }
 
-.subheadingTwo {
+.sub-h2 {
   @include font-size($heading-two-size * 5/8);
 }
 
-.subheadingThree {
+.sub-h3 {
   @include font-size($heading-three-size * 5/8);
 }
 
-.subheadingFour {
+.sub-h4 {
   @include font-size($heading-four-size * 5/8);
 }
 
-.subheadingFive {
+.sub-h5 {
   @include font-size($heading-five-size * 5/8);
 }
 
-.subheadingSix {
+.sub-h6 {
   @include font-size($heading-six-size * 5/8);
 }
 
-.subheadingOne, .subheadingTwo,
-.subheadingThree, .subheadingFour,
-.subheadingFive, .subheadingSix {
-  font-weight: normal;
-  line-height: 1.25;
+@each $heading in $headings {
+  .sub-#{$heading} {
+    font-weight: normal;
+    line-height: 1.25;
+  }
 }
 
 /**
- * Modifier `subheading[size]--block`
+ * Modifier `sub-<heading>--block`
  *
- * A `subheading[size]` modifier sets the display type for the subheading. The
+ * A `sub-<heading>` modifier sets the display type for the subheading. The
  * subheading may be used inside a naturally inline element, such as a `span`,
- * so this modifier lends `block` display to those types of elements.
+ * and this modifier lends `block` display to those types of elements.
  */
 
-.subheadingOne--block {
-  @extend .subheadingOne;
-}
-.subheadingTwo--block {
-  @extend .subheadingTwo;
-}
-.subheadingThree--block {
-  @extend .subheadingThree;
-}
-.subheadingFour--block {
-  @extend .subheadingFour;
-}
-.subheadingFive--block {
-  @extend .subheadingFive;
-}
-.subheadingSix--block {
-  @extend .subheadingSix;
+.sub-h1--block {
+  @extend .sub-h1;
 }
 
-.subheadingOne--block, .subheadingTwo--block,
-.subheadingThree--block, .subheadingFour--block,
-.subheadingFive--block, .subheadingSix--block {
-  display: block;
+.sub-h2--block {
+  @extend .sub-h2;
+}
+
+.sub-h3--block {
+  @extend .sub-h3;
+}
+
+.sub-h4--block {
+  @extend .sub-h4;
+}
+
+.sub-h5--block {
+  @extend .sub-h5;
+}
+
+.sub-h6--block {
+  @extend .sub-h6;
+}
+
+@each $heading in $headings {
+  .sub-#{$heading}--block {
+    display: block;
+  }
 }
 
 /**
