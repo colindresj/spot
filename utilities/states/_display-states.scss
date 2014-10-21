@@ -39,7 +39,7 @@ th.is-shown {
   @extend .u-disp--table-cell;
 }
 
-.is-for-screen-readers { // 1
+.is-for-screen-readers { /* 1 */
   @extend .u-pos--absolute;
   border: 0;
   clip: rect(0,0,0,0);

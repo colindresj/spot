@@ -11,12 +11,12 @@
  *    function.
  */
 
-@if $responsive == true { // 1
-  @each $size in $sizes { // 1
-    @include create-cols($num-cols, $size); // 2
+@if $responsive == true { /* 1 */
+  @each $size in $sizes { /* 1 */
+    @include create-cols($num-cols, $size); /* 2 */
   }
 } @else {
-  @include create-cols($num-cols); // 2
+  @include create-cols($num-cols); /* 2 */
 }
 
 /**

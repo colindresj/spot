@@ -35,16 +35,16 @@
  */
 
 [colspan]{
-    text-align: center; // 2
+  text-align: center; /* 1 */
 }
 [colspan="1"]{
-    text-align: left; // 2
+  text-align: left; /* 1 */
 }
 [rowspan]{
-    vertical-align: middle; // 2
+  vertical-align: middle; /* 1 */
 }
 [rowspan="1"]{
-    vertical-align: top; // 2
+  vertical-align: top; /* 1 */
 }
 
 .table {

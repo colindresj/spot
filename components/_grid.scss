@@ -27,14 +27,14 @@
  */
 
 .grid {
-  display: block; // 1
-  font-size: 0; // 2
-  margin: 0 0 0 (-$col-gutter); // 3
-  padding: 0; // 1
-  text-align: left; // 1
+  display: block; /* 1 */
+  font-size: 0; /* 2 */
+  margin: 0 0 0 (-$col-gutter); /* 3 */
+  padding: 0; /* 1 */
+  text-align: left; /* 1 */
 
   > .grid {
-    margin: 0; // 4
+    margin: 0; /* 4 */
   }
 }
 
@@ -60,11 +60,11 @@
  */
 
 .grid-col {
-  display: inline-block; // 1
-  font-size: $base-font-size; // 2
+  display: inline-block; /* 1 */
+  font-size: $base-font-size; /* 2 */
   padding-left: $col-gutter;
-  vertical-align: top; // 3
-  width: 100%; // 4
+  vertical-align: top; /* 3 */
+  width: 100%; /* 4 */
 }
 
 .grid-col--centered {

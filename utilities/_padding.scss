@@ -9,39 +9,39 @@
  *    can be aliased to `.u-pt`.
  */
 
-.u-pt--small, // 1
+.u-pt--small, /* 1 */
 .u-padding-top--small {
   padding-top: $small-space;
 }
 
-.u-pr--small, // 1
+.u-pr--small, /* 1 */
 .u-padding-right--small {
   padding-right: $small-space;
 }
 
-.u-pb--small, // 1
+.u-pb--small, /* 1 */
 .u-padding-bottom--small {
   padding-bottom: $small-space;
 }
 
-.u-pl--small, // 1
+.u-pl--small, /* 1 */
 .u-padding-left--small {
   padding-left: $small-space;
 }
 
-.u-pv--small, // 1
+.u-pv--small, /* 1 */
 .u-padding-vertical--small {
   @extend .u-pt--small;
   @extend .u-pb--small;
 }
 
-.u-ph--small, // 1
+.u-ph--small, /* 1 */
 .u-padding-horizontal--small {
   @extend .u-pr--small;
   @extend .u-pl--small;
 }
 
-.u-pa--small, // 1
+.u-pa--small, /* 1 */
 .u-padding-all--small {
   @extend .u-pt--small;
   @extend .u-pr--small;
@@ -49,39 +49,39 @@
   @extend .u-pl--small;
 }
 
-.u-pt--medium, // 1
+.u-pt--medium, /* 1 */
 .u-padding-top--medium {
   padding-top: $medium-space;
 }
 
-.u-pr--medium, // 1
+.u-pr--medium, /* 1 */
 .u-padding-right--medium {
   padding-right: $medium-space;
 }
 
-.u-pb--medium, // 1
+.u-pb--medium, /* 1 */
 .u-padding-bottom--medium {
   padding-bottom: $medium-space;
 }
 
-.u-pl--medium, // 1
+.u-pl--medium, /* 1 */
 .u-padding-left--medium {
   padding-left: $medium-space;
 }
 
-.u-pv--medium, // 1
+.u-pv--medium, /* 1 */
 .u-padding-vertical--medium {
   @extend .u-pt--medium;
   @extend .u-pb--medium;
 }
 
-.u-ph--medium, // 1
+.u-ph--medium, /* 1 */
 .u-padding-horizontal--medium {
   @extend .u-pr--medium;
   @extend .u-pl--medium;
 }
 
-.u-pa--medium, // 1
+.u-pa--medium, /* 1 */
 .u-padding-all--medium {
   @extend .u-pt--medium;
   @extend .u-pr--medium;
@@ -89,39 +89,39 @@
   @extend .u-pl--medium;
 }
 
-.u-pt--large, // 1
+.u-pt--large, /* 1 */
 .u-padding-top--large {
   padding-top: $large-space;
 }
 
-.u-pr--large, // 1
+.u-pr--large, /* 1 */
 .u-padding-right--large {
   padding-right: $large-space;
 }
 
-.u-pb--large, // 1
+.u-pb--large, /* 1 */
 .u-padding-bottom--large {
   padding-bottom: $large-space;
 }
 
-.u-pl--large, // 1
+.u-pl--large, /* 1 */
 .u-padding-left--large {
   padding-left: $large-space;
 }
 
-.u-pv--large, // 1
+.u-pv--large, /* 1 */
 .u-padding-vertical--large {
   @extend .u-pt--large;
   @extend .u-pb--large;
 }
 
-.u-ph--large, // 1
+.u-ph--large, /* 1 */
 .u-padding-horizontal--large {
   @extend .u-pr--large;
   @extend .u-pl--large;
 }
 
-.u-pa--large, // 1
+.u-pa--large, /* 1 */
 .u-padding-all--large {
   @extend .u-pt--large;
   @extend .u-pr--large;
