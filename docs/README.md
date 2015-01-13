@@ -4,3 +4,4 @@
 * [Introduction](introduction.md)
 * [Approach](approach.md)
 * [Conventions](conventions.md)
+* [Testing](testing.md)
